@@ -1,0 +1,129 @@
+:root{
+    --font1:"IBM Plex Sans Hebrew", sans-serif;
+    --font2:"Inter", sans-serif;
+}
+
+html {overflow-x: hidden; font-family: var(--font1);}
+body{position: relative;overflow: hidden;}
+
+.wrap{ width: 100%; margin: 0 auto; }
+
+.header .wrap{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.main_menu{
+    display: flex;
+}
+.logo{
+    font-size: 38px;
+    font-weight: bold;
+    padding-right: 40px;
+}
+.nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main_menu ul{
+    display: flex;
+    gap: 40px;
+}
+.main_menu ul li{
+    font-size: 17px;
+    font-weight: 600;
+    color: rgb(0 0 0 / 75%);
+    display: flex;
+    align-items: center;
+}
+.main_menu ul li:not(:nth-child(4))::after{
+    content: "";
+    background: url(../img/icon/down_arrow.svg);
+    height: 24px;
+    width: 24px;
+    margin-left: 3px;
+}
+.sub_menu ul li{
+    font-size: 17px;
+    font-weight: 500;
+    color: rgb(0 0 0 / 75%);
+}
+.sub_menu ul {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.world{
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(0 0 0 / 25%);
+    border-radius: 30px;
+    padding: 5px 15px;
+}
+.world::before{
+    content: "";
+    background: url(../img/icon/world.svg);
+    height: 24px;
+    width: 24px;
+    margin-right: 6px;
+}
+.world::after{
+    content: "";
+    background: url(../img/icon/down_arrow.svg);
+    height: 24px;
+    width: 24px;
+    margin-left: 6px;
+}
+.login{
+    border: 1px solid rgb(0 0 0 / 25%);
+    border-radius: 30px;
+    padding: 9px 21px;
+}
+.Request{
+    border: 1px solid rgb(0 0 0 / 25%);
+    border-radius: 30px;
+    padding: 9px 18px;
+    background-color: rgb(0 0 0 / 75%);
+    color: white !important;
+}
+.section_1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 664px;
+    background-color: #B1D8FC;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+}
+.multiline-text{
+    font-size: 56px;
+    font-weight: 600;
+    padding-bottom: 40px;
+}
+.section_1 p{
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+    padding-bottom: 5px;
+}
+.section_1 p::before{
+    content: "";
+    background: url(../img/icon/Check_ring.svg);
+    height: 24px;
+    width: 24px;
+    margin-right: 6px;
+}
+.section_1_textarea{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+.section_1 .Request{
+    font-weight: 500;
+    margin-top: 20px;
+    padding: 14px 31px;
+}
