@@ -293,3 +293,23 @@ button:hover {
     width: 1196px;
     margin: 0 auto; 
 }
+.counter{
+    color: #B0D9FF;
+    font-size: 80px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 170px;
+    padding-top: 90px;
+}
+.counter p{
+    font-size: 18px;
+    color: #fff;
+    font-weight: 200;
+    padding-top: 20px;
+}
+.section_4{
+    height: 1000px;
+}
