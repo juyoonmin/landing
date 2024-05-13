@@ -75,8 +75,8 @@ document.addEventListener('DOMContentLoaded', function () {
     .from('.img_box .back2', { duration: 0.5, opacity: 0, x: 50, y: -100 })
     .from('.img_box .img1', { duration: 0.5, opacity: 0, x: -50, y: 100 })
     .from('.img_box .img2', { duration: 0.5, opacity: 0, x: 50, y: -100 })
-    .from('.section_4_content2 .section_4_content_img', { duration: 1, delay: 0.2, opacity: 0, ease: 'power2.out' }) 
-    .from('.section_4_content2 .section_4_content_img .img3', { duration: 1, delay: 0.1, opacity: 0, ease: 'power2.out' }) 
+    .from('.section_4_content2 .section_4_content_img', { duration: 0.7, delay: 0.1, opacity: 0, ease: 'power2.out' }) 
+    .from('.section_4_content2 .section_4_content_img .img3', { duration: 0.7, delay: 0.1, opacity: 0, ease: 'power2.out' }) 
     .from('.section_4_content2 .section_4_content_text h3', { duration: 0.5, opacity: 0, x: -50, y: 0 }) 
     .from('.section_4_content2 .section_4_content_text p', { duration: 0.5, opacity: 0, x: -50, y: 0  }) 
     .from('.section_4_content2 .section_4_content_text button', { duration: 0.5, opacity: 0, x: -50, y: 0 });

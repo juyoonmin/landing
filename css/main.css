@@ -237,7 +237,6 @@ body {
 
 /* section_3 */
 .section_3 {
-    height: 1400px;
     background-color: #323232;
     border-radius: 60px;
 }
@@ -367,6 +366,7 @@ button:hover {
     margin: 0 auto;
     gap: 170px;
     padding-top: 90px;
+    padding-bottom: 120px;
 }
 
 .counter p {
@@ -458,4 +458,20 @@ button:hover {
 }
 .section_4_content2 .section_4_content_text h3{
     color: #9149ED;
+}
+
+
+/* section5 */
+
+.section_5{
+    background-color: #323232;
+    border-radius: 60px;
+}
+.section_5_text{
+    text-align: center;
+    font-size: 64px;
+    font-weight: 600;
+    padding-top: 120px;
+    padding-bottom: 40px;
+    color: #fff;
 }
