@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     gsap.to(counter, {
         value: 25000,
-        duration: 4, 
+        duration: 4,
         onUpdate: () => {
             trustedCounter.textContent = numberWithCommas(Math.round(counter.value)) + "+";
         },
@@ -61,24 +61,78 @@ document.addEventListener('DOMContentLoaded', function () {
     }, " hrs");
 
 
+    // section_4 애니메이션
     gsap.timeline({
         scrollTrigger: {
-            trigger: '.section_4_content_text', 
-            start: 'top bottom', 
-            toggleActions: 'play none none none' 
+            trigger: '.section_4_content',
+            start: 'center center',
+            end: '500%',
+            scrub: 1,
+            ease: 'none',
+            pin: true,
+            markers: true
         }
     })
-    .from('.section_4_content .section_4_content_text h3', { duration: 0.7, delay: 0.5, opacity: 0, ease: 'power2.out' })
-    .from('.section_4_content .section_4_content_text p', { duration: 0.7, delay: 0.1, opacity: 0, ease: 'power2.out' })
-    .from('.section_4_content .section_4_content_text button', { duration: 0.7, delay: 0.1, opacity: 0, ease: 'power2.out' })
-    .from('.img_box .back1', { duration: 0.5, opacity: 0, x: -50, y: 100 })
-    .from('.img_box .back2', { duration: 0.5, opacity: 0, x: 50, y: -100 })
-    .from('.img_box .img1', { duration: 0.5, opacity: 0, x: -50, y: 100 })
-    .from('.img_box .img2', { duration: 0.5, opacity: 0, x: 50, y: -100 })
-    .from('.section_4_content2 .section_4_content_img', { duration: 0.7, delay: 0.1, opacity: 0, ease: 'power2.out' }) 
-    .from('.section_4_content2 .section_4_content_img .img3', { duration: 0.7, delay: 0.1, opacity: 0, ease: 'power2.out' }) 
-    .from('.section_4_content2 .section_4_content_text h3', { duration: 0.5, opacity: 0, x: -50, y: 0 }) 
-    .from('.section_4_content2 .section_4_content_text p', { duration: 0.5, opacity: 0, x: -50, y: 0  }) 
-    .from('.section_4_content2 .section_4_content_text button', { duration: 0.5, opacity: 0, x: -50, y: 0 });
+        .set(".section_4_content_text h3", { opacity: 0, y: 50 })
+        .set(".section_4_content_text p", { opacity: 0, y: 50 })
+        .set(".section_4_content_text button", { opacity: 0, y: 50 })
+        .set(".section_4_content .back1", { opacity: 0, y: 50 })
+        .set(".section_4_content .img1", { opacity: 0, y: 50 })
+        .set(".section_4_content .back2", { opacity: 0, y: 50 })
+        .set(".section_4_content .img2", { opacity: 0, y: 50 })
+
+
+        .to(".section_4_content_text h3", { opacity: 1, duration: 3, y: 0 })
+        .to(".section_4_content_text p", { opacity: 1, duration: 3, y: 0 })
+        .to(".section_4_content_text button", { opacity: 1, duration: 3, y: 0 })
+        .to(".section_4_content .back1", { opacity: 1, duration: 3, y: 0 })
+        .to(".section_4_content .img1", { opacity: 1, duration: 3, y: 0 })
+        .to(".section_4_content .back2", { opacity: 1, duration: 3, y: 0 })
+        .to(".section_4_content .img2", { opacity: 1, duration: 3, y: 0 });
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: '.section_4_content2',
+            start: 'center center',
+            end: '500%',
+            scrub: 1,
+            ease: 'none',
+            pin: true,
+            markers: true
+        }
+    })
+        .set(".section_4_content2 .section_4_content_img", { opacity: 0, y: 50 })
+        .set(".section_4_content2 .img3", { opacity: 0, y: 50 })
+        .set(".section_4_content2 .section_4_content_text h3", { opacity: 0, y: 50 })
+        .set(".section_4_content2 .section_4_content_text p", { opacity: 0, y: 50 })
+        .set(".section_4_content2 .section_4_content_text button", { opacity: 0, y: 50 })
+
+        .to(".section_4_content2 .section_4_content_img", { opacity: 1, duration: 3, y: 0 })
+        .to(".section_4_content2 .img3", { opacity: 1, duration: 3, y: 0 })
+        .to(".section_4_content2 .section_4_content_text h3", { opacity: 1, duration: 3, y: 0 })
+        .to(".section_4_content2 .section_4_content_text p", { opacity: 1, duration: 3, y: 0 })
+        .to(".section_4_content2 .section_4_content_text button", { opacity: 1, duration: 3, y: 0 });
+
+
+    // swiper
+    const swiper = new Swiper('.swiper', {
+        spaceBetween: 30,
+        centeredSlides: true,
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        mousewheel: true,
+        keyboard: true,
+    });
+
 });
 
