@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
         scrollTrigger: {
             trigger: '.section_4_content',
             start: 'center center',
-            end: '500%',
+            end: '700%',
             scrub: 1,
             ease: 'none',
             pin: true,
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
         scrollTrigger: {
             trigger: '.section_4_content2',
             start: 'center center',
-            end: '500%',
+            end: '700%',
             scrub: 1,
             ease: 'none',
             pin: true,
@@ -122,10 +122,10 @@ document.addEventListener('DOMContentLoaded', function () {
         spaceBetween: 30,
         centeredSlides: true,
         loop: true,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-        },
+        // autoplay: {
+        //     delay: 2500,
+        //     disableOnInteraction: false,
+        // },
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",

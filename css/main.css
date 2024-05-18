@@ -475,3 +475,23 @@ button:hover {
     padding-bottom: 40px;
     color: #fff;
 }
+.swiper .swiper-slide{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 60px;
+    background: linear-gradient(to right, #B1D8FC 50%, #fff 50%);
+}
+.swiper-slide .section_4_content_text h3{
+    color: #000;
+}
+.swiper_imgbox{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #B1D8FC;
+    rotate: 9deg;
+}
+.swiper-slide img{
+    max-width: 550px;
+    rotate: 16deg;
+}
