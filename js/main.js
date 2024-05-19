@@ -118,27 +118,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // swiper
-    // const swiper = new Swiper('.swiper', {
-    //     spaceBetween: 30,
-    //     centeredSlides: true,
-    //     loop: true,
-    //     // autoplay: {
-    //     //     delay: 2500,
-    //     //     disableOnInteraction: false,
-    //     // },
-    //     navigation: {
-    //         nextEl: ".swiper-button-next",
-    //         prevEl: ".swiper-button-prev",
-    //     },
-    //     pagination: {
-    //         el: ".swiper-pagination",
-    //         clickable: true,
-    //     },
-    //     mousewheel: true,
-    //     keyboard: true,
-    // });
+
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: '.section_5_text',
+            start: 'top center',
+        }
+    })
+    .set(".swiper-slide:nth-child(1) .section_4_content_text", { opacity: 0, scale: 0.8 })
+    .set(".swiper-slide:nth-child(1) .section_4_content_text h3", { opacity: 0, y: 50, scale: 0.8 })
+    .set(".swiper-slide:nth-child(1) .section_4_content_text p", { opacity: 0, y: 50, scale: 0.8 })
+    .set(".swiper-slide:nth-child(1) .section_4_content_text button", { opacity: 0, y: 50, scale: 0.8 })
+    .set(".swiper-slide:nth-child(1) .swiper_imgbox", { opacity: 0, y: -50, x: -50, scale: 0.8 })
+    .set(".swiper-slide:nth-child(1) .swiper_imgbox img", { opacity: 0, y: 50, x: 50, rotation: 45 })
+    .to(".swiper-slide:nth-child(1) .section_4_content_text", { opacity: 1, scale: 1, duration: 1 })
+    .to(".swiper-slide:nth-child(1) .section_4_content_text h3", { opacity: 1, duration: 1, y: 0, scale: 1, stagger: 0.2 }, "-=0.8")
+    .to(".swiper-slide:nth-child(1) .section_4_content_text p", { opacity: 1, duration: 1, y: 0, scale: 1, stagger: 0.2 }, "-=0.8")
+    .to(".swiper-slide:nth-child(1) .section_4_content_text button", { opacity: 1, duration: 1, y: 0, scale: 1, stagger: 0.2 }, "-=0.8")
+    .to(".swiper-slide:nth-child(1) .swiper_imgbox", { opacity: 1, duration: 1, y: 0, x: 0, scale: 1 })
+    .to(".swiper-slide:nth-child(1) .swiper_imgbox img", { opacity: 1, duration: 1, y: 0, x: 0, rotation: 10 });
 
     const swiper = new Swiper('.swiper', {
+        mousewheel: true,
+        keyboard: true,
         spaceBetween: 30,
         centeredSlides: true,
         loop: true,
@@ -152,44 +154,27 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         on: {
             slideChangeTransitionStart: function () {
-                gsap.timeline()
-                  .set(".swiper-slide-active .section_4_content_text h3", { opacity: 0, y: 50 })
-                  .set(".swiper-slide-active .section_4_content_text p", { opacity: 0, y: 50 })
-                  .set(".swiper-slide-active .section_4_content_text button", { opacity: 0, y: 50 })
-                  .set(".swiper-slide-active .swiper_imgbox", { opacity: 0, y: -50, x: -50 })
-                  .set(".swiper-slide-active .swiper_imgbox img", { opacity: 0, y: 50, x: 50 })
-                  .to(".swiper-slide-active .section_4_content_text h3", { opacity: 1, duration: 1, y: 0 })
-                  .to(".swiper-slide-active .section_4_content_text p", { opacity: 1, duration: 1, y: 0 })
-                  .to(".swiper-slide-active .section_4_content_text button", { opacity: 1, duration: 1, y: 0 })
-                  .to(".swiper-slide-active .swiper_imgbox", { opacity: 1, duration: 1, y: 0, x: 0 })
-                  .to(".swiper-slide-active .swiper_imgbox img", { opacity: 1, duration: 1, y: 0, x: 0 })
-              },
+                const activeSlide = document.querySelector('.swiper-slide-active');
+                if (activeSlide) {
+                    gsap.timeline()
+                        .set(activeSlide.querySelector('.section_4_content_text'), { opacity: 0, scale: 0.8 })
+                        .set(activeSlide.querySelector('.section_4_content_text h3'), { opacity: 0, y: 50, scale: 0.8 })
+                        .set(activeSlide.querySelector('.section_4_content_text p'), { opacity: 0, y: 50, scale: 0.8 })
+                        .set(activeSlide.querySelector('.section_4_content_text button'), { opacity: 0, y: 50, scale: 0.8 })
+                        .set(activeSlide.querySelector('.swiper_imgbox'), { opacity: 0, y: -50, x: -50, scale: 0.8 })
+                        .set(activeSlide.querySelector('.swiper_imgbox img'), { opacity: 0, y: 50, x: 50, rotation: 45 })
+                        .to(activeSlide.querySelector('.section_4_content_text'), { opacity: 1, scale: 1, duration: 1 })
+                        .to(activeSlide.querySelector('.section_4_content_text h3'), { opacity: 1, duration: 1, y: 0, scale: 1, stagger: 0.2 }, "-=0.8")
+                        .to(activeSlide.querySelector('.section_4_content_text p'), { opacity: 1, duration: 1, y: 0, scale: 1, stagger: 0.2 }, "-=0.8")
+                        .to(activeSlide.querySelector('.section_4_content_text button'), { opacity: 1, duration: 1, y: 0, scale: 1, stagger: 0.2 }, "-=0.8")
+                        .to(activeSlide.querySelector('.swiper_imgbox'), { opacity: 1, duration: 1, y: 0, x: 0, scale: 1 })
+                        .to(activeSlide.querySelector('.swiper_imgbox img'), { opacity: 1, duration: 1, y: 0, x: 0, rotation: 10 });
+                }
+            },
         },
     });
 
-    gsap.timeline({
-        scrollTrigger: {
-            trigger: '.swiper',
-            start: 'top bottom',
-            markers: true,
-            onEnter: () => {
-                const firstSlide = document.querySelector('.swiper-slide:nth-child(1)');
-                if (firstSlide) {
-                    gsap.timeline()
-                        .set(firstSlide.querySelector('.section_4_content_text h3'), { opacity: 0, y: 50 })
-                        .set(firstSlide.querySelector('.section_4_content_text p'), { opacity: 0, y: 50 })
-                        .set(firstSlide.querySelector('.section_4_content_text button'), { opacity: 0, y: 50 })
-                        .set(firstSlide.querySelector('.swiper_imgbox'), { opacity: 0, y: -50, x: -50 })
-                        .set(firstSlide.querySelector('.swiper_imgbox img'), { opacity: 0, y: 50, x: 50 })
-                        .to(firstSlide.querySelector('.section_4_content_text h3'), { opacity: 1, duration: 1, y: 0 })
-                        .to(firstSlide.querySelector('.section_4_content_text p'), { opacity: 1, duration: 1, y: 0 })
-                        .to(firstSlide.querySelector('.section_4_content_text button'), { opacity: 1, duration: 1, y: 0 })
-                        .to(firstSlide.querySelector('.swiper_imgbox'), { opacity: 1, duration: 1, y: 0, x: 0 })
-                        .to(firstSlide.querySelector('.swiper_imgbox img'), { opacity: 1, duration: 1, y: 0, x: 0 })
-                }
-            }
-        }
-    });
+    
 
 
 });

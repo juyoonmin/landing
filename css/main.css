@@ -473,7 +473,7 @@ button:hover {
     font-size: 64px;
     font-weight: 600;
     padding-top: 120px;
-    padding-bottom: 60px;
+    padding-bottom: 80px;
     color: #fff;
 }
 .swiper .swiper-slide{
@@ -493,7 +493,7 @@ button:hover {
     rotate: 9deg;
 }
 .swiper-slide img{
-    max-width: 550px;
+    max-width: 30vw;
     rotate: 16deg;
 }
 .swiper-button-pagination{
@@ -538,4 +538,12 @@ button:hover {
  
 .swiper-button-pagination .swiper-button-prev::after,.swiper-button-pagination .swiper-button-next::after {
     font-size: 12px;
+}
+.swiper_imgbox{
+    opacity: 0;
+}
+@media screen and (min-width:1920px) {
+   .swiper_imgbox img{
+    max-width: 550px;
+   }
 }
