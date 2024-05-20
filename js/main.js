@@ -176,6 +176,36 @@ document.addEventListener('DOMContentLoaded', function () {
 
     
 
+    // section_6
 
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: '.section_6_content',
+            start: 'center center',
+            end: '700%',
+            scrub: 1,
+            ease: 'none',
+            pin: true,
+            // markers: true,
+        }
+    })
+        .set(".section_6_img", { opacity: 0, y: 50, scale: 0.8 })
+        .set(".se6_img", { opacity: 0, y: 50, scale: 0.8 })
+        .set(".se6_bubble1", { opacity: 0, y: 50 })
+        .set(".se6_bubble2", { opacity: 0, y: 50 })
+        .set(".step1", { opacity: 0, y: -100 })
+        .set(".step2", { opacity: 0, y: -100 })
+        .set(".step3", { opacity: 0, y: -100 })
+    
+        .to(".section_6_img", { opacity: 1, duration: 3, y: 0, scale: 1 })
+        .to(".se6_img", { opacity: 1, duration: 3, y: 0, scale: 1 }, "<")
+    
+        .to(".step1", { opacity: 1, duration: 2, y: 0, ease: "bounce.out" }, "<")
+        .to(".step2", { opacity: 1, duration: 2, y: 0, ease: "bounce.out" }, "<1")
+        .to(".step3", { opacity: 1, duration: 2, y: 0, ease: "bounce.out" }, "<2")
+    
+        .to(".se6_bubble1", { opacity: 1, duration: 1, y: 0 }, ">")
+        .to(".se6_bubble2", { opacity: 1, duration: 1, y: 0 }, ">");
+        
 });
 
