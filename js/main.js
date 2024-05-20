@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
         gsap.to(obj, {
             val: endValue, // 종료 값 설정
             ease: "none",
-            duration: 3,
+            duration: 2,
             scrollTrigger: {
                 trigger: "#" + elementId, // 애니메이션 트리거 요소 설정
                 start: "top bottom", // 트리거 조건 설정: 요소 상단이 뷰포트 하단에 닿을 때
@@ -132,11 +132,11 @@ document.addEventListener('DOMContentLoaded', function () {
     .set(".swiper-slide:nth-child(1) .swiper_imgbox", { opacity: 0, y: -50, x: -50, scale: 0.8 })
     .set(".swiper-slide:nth-child(1) .swiper_imgbox img", { opacity: 0, y: 50, x: 50, rotation: 45 })
     .to(".swiper-slide:nth-child(1) .section_4_content_text", { opacity: 1, scale: 1, duration: 1 })
-    .to(".swiper-slide:nth-child(1) .section_4_content_text h3", { opacity: 1, duration: 1, y: 0, scale: 1, stagger: 0.2 }, "-=0.8")
-    .to(".swiper-slide:nth-child(1) .section_4_content_text p", { opacity: 1, duration: 1, y: 0, scale: 1, stagger: 0.2 }, "-=0.8")
-    .to(".swiper-slide:nth-child(1) .section_4_content_text button", { opacity: 1, duration: 1, y: 0, scale: 1, stagger: 0.2 }, "-=0.8")
-    .to(".swiper-slide:nth-child(1) .swiper_imgbox", { opacity: 1, duration: 1, y: 0, x: 0, scale: 1 })
-    .to(".swiper-slide:nth-child(1) .swiper_imgbox img", { opacity: 1, duration: 1, y: 0, x: 0, rotation: 10 });
+    .to(".swiper-slide:nth-child(1) .section_4_content_text h3", { opacity: 1, duration: 0.7, y: 0, scale: 1, stagger: 0.2 }, "-=0.8")
+    .to(".swiper-slide:nth-child(1) .section_4_content_text p", { opacity: 1, duration: 0.7, y: 0, scale: 1, stagger: 0.2 }, "-=0.8")
+    .to(".swiper-slide:nth-child(1) .section_4_content_text button", { opacity: 1, duration: 0.7, y: 0, scale: 1, stagger: 0.2 }, "-=0.8")
+    .to(".swiper-slide:nth-child(1) .swiper_imgbox", { opacity: 1, duration: 0.5, y: 0, x: 0, scale: 1 })
+    .to(".swiper-slide:nth-child(1) .swiper_imgbox img", { opacity: 1, duration: 0.5, y: 0, x: 0, rotation: -10 });
 
     const swiper = new Swiper('.swiper', {
         mousewheel: true,
@@ -164,11 +164,11 @@ document.addEventListener('DOMContentLoaded', function () {
                         .set(activeSlide.querySelector('.swiper_imgbox'), { opacity: 0, y: -50, x: -50, scale: 0.8 })
                         .set(activeSlide.querySelector('.swiper_imgbox img'), { opacity: 0, y: 50, x: 50, rotation: 45 })
                         .to(activeSlide.querySelector('.section_4_content_text'), { opacity: 1, scale: 1, duration: 1 })
-                        .to(activeSlide.querySelector('.section_4_content_text h3'), { opacity: 1, duration: 1, y: 0, scale: 1, stagger: 0.2 }, "-=0.8")
-                        .to(activeSlide.querySelector('.section_4_content_text p'), { opacity: 1, duration: 1, y: 0, scale: 1, stagger: 0.2 }, "-=0.8")
-                        .to(activeSlide.querySelector('.section_4_content_text button'), { opacity: 1, duration: 1, y: 0, scale: 1, stagger: 0.2 }, "-=0.8")
-                        .to(activeSlide.querySelector('.swiper_imgbox'), { opacity: 1, duration: 1, y: 0, x: 0, scale: 1 })
-                        .to(activeSlide.querySelector('.swiper_imgbox img'), { opacity: 1, duration: 1, y: 0, x: 0, rotation: 10 });
+                        .to(activeSlide.querySelector('.section_4_content_text h3'), { opacity: 1, duration: 0.7, y: 0, scale: 1, stagger: 0.2 }, "-=0.8")
+                        .to(activeSlide.querySelector('.section_4_content_text p'), { opacity: 1, duration: 0.7, y: 0, scale: 1, stagger: 0.2 }, "-=0.8")
+                        .to(activeSlide.querySelector('.section_4_content_text button'), { opacity: 1, duration: 0.7, y: 0, scale: 1, stagger: 0.2 }, "-=0.8")
+                        .to(activeSlide.querySelector('.swiper_imgbox'), { opacity: 1, duration: 0.5, y: 0, x: 0, scale: 1 })
+                        .to(activeSlide.querySelector('.swiper_imgbox img'), { opacity: 1, duration: 0.5, y: 0, x: 0, rotation: -10 });
                 }
             },
         },

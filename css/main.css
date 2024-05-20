@@ -255,7 +255,7 @@ body {
 .section_3_cardbox {
     display: flex;
     justify-content: center;
-    padding: 40px 0 40px 0;
+    padding: 80px 0 40px 0;
     gap: 20px;
 }
 
@@ -446,8 +446,7 @@ button:hover {
 }
 .section_4_content2 .section_4_content_img{
     background-color: #ffeaff;
-    width: 565px;
-    height: 515px;
+    padding: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -466,7 +465,6 @@ button:hover {
 .section_5{
     background-color: #323232;
     border-radius: 60px;
-    height: 1500px;
 }
 .section_5_text{
     text-align: center;
@@ -546,4 +544,85 @@ button:hover {
    .swiper_imgbox img{
     max-width: 550px;
    }
+}
+
+/* section6 */
+
+.section_6_text {
+    text-align: center;
+    font-size: 64px;
+    font-weight: 600;
+    padding-top: 120px;
+    padding-bottom: 80px;
+}
+.section_6_content{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 20px;
+}
+.section_6_img{
+    background-color: #ffeaff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    padding: 50px;
+}
+.section_6_imgbox{
+    position: relative;
+}
+.section_6_imgbox img{
+    max-width: 450px;
+    border-radius: 130px;
+}
+
+
+
+
+
+
+.steps h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.step {
+    display: flex;
+    align-items: flex-start;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.step-number {
+    background-color: #6C47FF;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+.step-content h3 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+}
+.step-content p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+.start-now-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
 }
