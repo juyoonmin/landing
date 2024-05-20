@@ -16,7 +16,7 @@ body {
 .wrap {
     width: 90%;
     margin: 0 auto;
-    max-width: 1720px;
+    max-width: 1440px;
 }
 
 
@@ -441,8 +441,11 @@ button:hover {
 .section_4_content2{
     margin-top: 200px;
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     align-items: center;
+}
+.section_4_content2 .section_4_content_text{
+    margin-left: 10%;
 }
 .section_4_content2 .section_4_content_img{
     background-color: #ffeaff;
@@ -567,35 +570,60 @@ button:hover {
     justify-content: center;
     align-items: center;
     border-radius: 30px;
-    padding: 50px;
+    /* padding: 50px; */
+    width: 50%;
 }
 .section_6_imgbox{
     position: relative;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.section_6_imgbox img{
-    max-width: 450px;
+.section_6_imgbox .se6_img{
+    width: 80%;
     border-radius: 130px;
 }
+.se6_bubble1{
+    position: absolute;
+    top: 150px;
+    right: 15px;
+}
+.se6_bubble2{
+    position: absolute;
+    left: 20px;
+    bottom: 205px;
+}
 
-
-
-
-
-
+.steps{
+    width: 50%;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.step1{
+    height: calc(30% - 40px);
+}
+.step2{
+    height: calc(30% - 40px);
+}
+.step3{
+    height: calc(40% - 40px);
+}
 .steps h1 {
     font-size: 24px;
     margin-bottom: 20px;
 }
 .step {
     display: flex;
-    align-items: flex-start;
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 10px;
-    margin-bottom: 20px;
+    
 }
-.step-number {
-    background-color: #6C47FF;
+.step-content h3::before {
+    content: attr(data-step);
+    background-color: #9149ED;
     color: white;
     font-size: 18px;
     font-weight: bold;
@@ -605,24 +633,35 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 15px;
+    position: relative;
+}
+.step-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .step-content h3 {
-    margin: 0 0 5px 0;
-    font-size: 18px;
+    margin: 0 0 15px 0;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 .step-content p {
     margin: 0;
-    font-size: 14px;
+    font-size: 16px;
     color: #666;
+    padding-left: 45px;
 }
-.start-now-button {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #000;
+.step-button{
+    padding-left: 41px;
+    padding-top: 20px;
+}
+.step-button button {
+    background-color: #fff;
+    border: black solid 1px;
+}
+.step-button button:hover{
+    background-color: #9149ED;
     color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 14px;
 }
