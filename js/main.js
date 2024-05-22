@@ -108,12 +108,12 @@ document.addEventListener('DOMContentLoaded', function () {
         .set(".section_4_content2 .section_4_content_text button", { opacity: 0, y: 50 })
 
 
-        .to(".section_4_content2 .section_4_content_img", { opacity: 1, duration: 3, y: 0 })
-        .to(".section_4_content2 .img3", { opacity: 1, duration: 3, y: 0 })
+        .to(".section_4_content2 .section_4_content_img", { opacity: 1, duration: 2, y: 0 })
+        .to(".section_4_content2 .img3", { opacity: 1, duration: 2, y: 0 })
         .to(".section_4_content2 .section_4_content_text", { opacity: 1, duration: 0.1, y: 0 })
-        .to(".section_4_content2 .section_4_content_text h3", { opacity: 1, duration: 3, y: 0 })
-        .to(".section_4_content2 .section_4_content_text p", { opacity: 1, duration: 3, y: 0 })
-        .to(".section_4_content2 .section_4_content_text button", { opacity: 1, duration: 3, y: 0 });
+        .to(".section_4_content2 .section_4_content_text h3", { opacity: 1, duration: 2, y: 0 })
+        .to(".section_4_content2 .section_4_content_text p", { opacity: 1, duration: 2, y: 0 })
+        .to(".section_4_content2 .section_4_content_text button", { opacity: 1, duration: 2, y: 0 });
 
 
 
@@ -138,8 +138,8 @@ document.addEventListener('DOMContentLoaded', function () {
         .to(".swiper-slide:nth-child(1) .swiper_imgbox", { opacity: 1, duration: 0.7, y: 0, x: 0, scale: 1 }, 'PStart')
         .to(".swiper-slide:nth-child(1) .swiper_imgbox img", { opacity: 1, duration: 0.7, y: 0, x: 0, scale: 1 }, 'PStart')
         .to(".swiper-slide:nth-child(1) .swiper_imgbox img", { rotation: 10, duration: 0.7 })
-        .to(".swiper-slide:nth-child(1) .section_4_content_text p", { opacity: 1, duration: 0.7, x: 0 })
-        .to(".swiper-slide:nth-child(1) .section_4_content_text button", { opacity: 1, duration: 0.7, x: 0 });
+        .to(".swiper-slide:nth-child(1) .section_4_content_text p", { opacity: 1, duration: 0.3, x: 0 })
+        .to(".swiper-slide:nth-child(1) .section_4_content_text button", { opacity: 1, duration: 0.3, x: 0 });
 
 
     const swiper = new Swiper('.swiper', {
@@ -175,8 +175,8 @@ document.addEventListener('DOMContentLoaded', function () {
                         .to(activeSlide.querySelector('.swiper_imgbox'), { opacity: 1, duration: 0.7, y: 0, x: 0, scale: 1 }, 'PStart')
                         .to(activeSlide.querySelector('.swiper_imgbox img'), { opacity: 1, duration: 0.7, y: 0, x: 0, scale: 1 }, 'PStart')
                         .to(activeSlide.querySelector('.swiper_imgbox img'), { rotation: 10, duration: 0.7 },)
-                        .to(activeSlide.querySelector('.section_4_content_text p'), { opacity: 1, duration: 0.7, x: 0 },)
-                        .to(activeSlide.querySelector('.section_4_content_text button'), { opacity: 1, duration: 0.7, x: 0 });
+                        .to(activeSlide.querySelector('.section_4_content_text p'), { opacity: 1, duration: 0.3, x: 0 },)
+                        .to(activeSlide.querySelector('.section_4_content_text button'), { opacity: 1, duration: 0.3, x: 0 });
 
                 }
             },
