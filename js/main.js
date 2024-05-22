@@ -125,18 +125,22 @@ document.addEventListener('DOMContentLoaded', function () {
             start: 'top center',
         }
     })
-    .set(".swiper-slide:nth-child(1) .section_4_content_text", { opacity: 0, scale: 0.8 })
-    .set(".swiper-slide:nth-child(1) .section_4_content_text h3", { opacity: 0, y: 50, scale: 0.8 })
-    .set(".swiper-slide:nth-child(1) .section_4_content_text p", { opacity: 0, y: 50, scale: 0.8 })
-    .set(".swiper-slide:nth-child(1) .section_4_content_text button", { opacity: 0, y: 50, scale: 0.8 })
-    .set(".swiper-slide:nth-child(1) .swiper_imgbox", { opacity: 0, y: -50, x: -50, scale: 0.8 })
-    .set(".swiper-slide:nth-child(1) .swiper_imgbox img", { opacity: 0, y: 50, x: 50, rotation: 45 })
-    .to(".swiper-slide:nth-child(1) .section_4_content_text", { opacity: 1, scale: 1, duration: 1 })
-    .to(".swiper-slide:nth-child(1) .section_4_content_text h3", { opacity: 1, duration: 0.7, y: 0, scale: 1, stagger: 0.2 }, "-=0.8")
-    .to(".swiper-slide:nth-child(1) .section_4_content_text p", { opacity: 1, duration: 0.7, y: 0, scale: 1, stagger: 0.2 }, "-=0.8")
-    .to(".swiper-slide:nth-child(1) .section_4_content_text button", { opacity: 1, duration: 0.7, y: 0, scale: 1, stagger: 0.2 }, "-=0.8")
-    .to(".swiper-slide:nth-child(1) .swiper_imgbox", { opacity: 1, duration: 0.5, y: 0, x: 0, scale: 1 })
-    .to(".swiper-slide:nth-child(1) .swiper_imgbox img", { opacity: 1, duration: 0.5, y: 0, x: 0, rotation: -10 });
+        .set(".swiper-slide:nth-child(1) .section_4_content_text", { opacity: 0, })
+        .set(".swiper-slide:nth-child(1) .section_4_content_text h3", { opacity: 0, x: -50, })
+        .set(".swiper-slide:nth-child(1) .section_4_content_text p", { opacity: 0, x: -50, })
+        .set(".swiper-slide:nth-child(1) .section_4_content_text button", { opacity: 0, x: -50, })
+        .set(".swiper-slide:nth-child(1) .swiper_imgbox", { opacity: 0, scale: 0.8 })
+        .set(".swiper-slide:nth-child(1) .swiper_imgbox img", { opacity: 0, rotation: 0, scale: 0.8 })
+
+        .to(".swiper-slide:nth-child(1) .section_4_content_text", { opacity: 1, duration: 0.5 })
+        .addLabel('PStart')
+        .to(".swiper-slide:nth-child(1) .section_4_content_text h3", { opacity: 1, duration: 0.7, x: 0 }, 'PStart')
+        .to(".swiper-slide:nth-child(1) .swiper_imgbox", { opacity: 1, duration: 0.7, y: 0, x: 0, scale: 1 }, 'PStart')
+        .to(".swiper-slide:nth-child(1) .swiper_imgbox img", { opacity: 1, duration: 0.7, y: 0, x: 0, scale: 1 }, 'PStart')
+        .to(".swiper-slide:nth-child(1) .swiper_imgbox img", { rotation: 10, duration: 0.7 })
+        .to(".swiper-slide:nth-child(1) .section_4_content_text p", { opacity: 1, duration: 0.7, x: 0 })
+        .to(".swiper-slide:nth-child(1) .section_4_content_text button", { opacity: 1, duration: 0.7, x: 0 });
+
 
     const swiper = new Swiper('.swiper', {
         mousewheel: true,
@@ -156,25 +160,30 @@ document.addEventListener('DOMContentLoaded', function () {
             slideChangeTransitionStart: function () {
                 const activeSlide = document.querySelector('.swiper-slide-active');
                 if (activeSlide) {
-                    gsap.timeline()
-                        .set(activeSlide.querySelector('.section_4_content_text'), { opacity: 0, scale: 0.8 })
-                        .set(activeSlide.querySelector('.section_4_content_text h3'), { opacity: 0, y: 50, scale: 0.8 })
-                        .set(activeSlide.querySelector('.section_4_content_text p'), { opacity: 0, y: 50, scale: 0.8 })
-                        .set(activeSlide.querySelector('.section_4_content_text button'), { opacity: 0, y: 50, scale: 0.8 })
-                        .set(activeSlide.querySelector('.swiper_imgbox'), { opacity: 0, y: -50, x: -50, scale: 0.8 })
-                        .set(activeSlide.querySelector('.swiper_imgbox img'), { opacity: 0, y: 50, x: 50, rotation: 45 })
-                        .to(activeSlide.querySelector('.section_4_content_text'), { opacity: 1, scale: 1, duration: 1 })
-                        .to(activeSlide.querySelector('.section_4_content_text h3'), { opacity: 1, duration: 0.7, y: 0, scale: 1, stagger: 0.2 }, "-=0.8")
-                        .to(activeSlide.querySelector('.section_4_content_text p'), { opacity: 1, duration: 0.7, y: 0, scale: 1, stagger: 0.2 }, "-=0.8")
-                        .to(activeSlide.querySelector('.section_4_content_text button'), { opacity: 1, duration: 0.7, y: 0, scale: 1, stagger: 0.2 }, "-=0.8")
-                        .to(activeSlide.querySelector('.swiper_imgbox'), { opacity: 1, duration: 0.5, y: 0, x: 0, scale: 1 })
-                        .to(activeSlide.querySelector('.swiper_imgbox img'), { opacity: 1, duration: 0.5, y: 0, x: 0, rotation: -10 });
+                    const tl = gsap.timeline();
+
+                    tl.set(activeSlide.querySelector('.section_4_content_text'), { opacity: 0 })
+                        .set(activeSlide.querySelector('.section_4_content_text h3'), { opacity: 0, x: -50 })
+                        .set(activeSlide.querySelector('.section_4_content_text p'), { opacity: 0, x: -50 })
+                        .set(activeSlide.querySelector('.section_4_content_text button'), { opacity: 0, x: -50 })
+                        .set(activeSlide.querySelector('.swiper_imgbox'), { opacity: 0, scale: 0.8 })
+                        .set(activeSlide.querySelector('.swiper_imgbox img'), { opacity: 0, rotation: 0, scale: 0.8 });
+
+                    tl.to(activeSlide.querySelector('.section_4_content_text'), { opacity: 1, duration: 0.5 })
+                        .addLabel('PStart')
+                        .to(activeSlide.querySelector('.section_4_content_text h3'), { opacity: 1, duration: 0.7, x: 0 }, 'PStart')
+                        .to(activeSlide.querySelector('.swiper_imgbox'), { opacity: 1, duration: 0.7, y: 0, x: 0, scale: 1 }, 'PStart')
+                        .to(activeSlide.querySelector('.swiper_imgbox img'), { opacity: 1, duration: 0.7, y: 0, x: 0, scale: 1 }, 'PStart')
+                        .to(activeSlide.querySelector('.swiper_imgbox img'), { rotation: 10, duration: 0.7 },)
+                        .to(activeSlide.querySelector('.section_4_content_text p'), { opacity: 1, duration: 0.7, x: 0 },)
+                        .to(activeSlide.querySelector('.section_4_content_text button'), { opacity: 1, duration: 0.7, x: 0 });
+
                 }
             },
         },
     });
 
-    
+
 
     // section_6
 
@@ -193,19 +202,21 @@ document.addEventListener('DOMContentLoaded', function () {
         .set(".se6_img", { opacity: 0, y: 50, scale: 0.8 })
         .set(".se6_bubble1", { opacity: 0, y: 50 })
         .set(".se6_bubble2", { opacity: 0, y: 50 })
-        .set(".step1", { opacity: 0, y: -100 })
-        .set(".step2", { opacity: 0, y: -100 })
-        .set(".step3", { opacity: 0, y: -100 })
-    
-        .to(".section_6_img", { opacity: 1, duration: 3, y: 0, scale: 1 })
-        .to(".se6_img", { opacity: 1, duration: 3, y: 0, scale: 1 }, "<")
-    
-        .to(".step1", { opacity: 1, duration: 2, y: 0, ease: "bounce.out" }, "<")
-        .to(".step2", { opacity: 1, duration: 2, y: 0, ease: "bounce.out" }, "<1")
-        .to(".step3", { opacity: 1, duration: 2, y: 0, ease: "bounce.out" }, "<2")
-    
-        .to(".se6_bubble1", { opacity: 1, duration: 1, y: 0 }, ">")
-        .to(".se6_bubble2", { opacity: 1, duration: 1, y: 0 }, ">");
-        
+        .set(".step1", { opacity: 0, y: -50 })
+        .set(".step2", { opacity: 0, y: -50 })
+        .set(".step3", { opacity: 0, y: -50 })
+
+        .to(".section_6_img", { opacity: 1, duration: 2, y: 0, scale: 1 })
+        .to(".se6_img", { opacity: 1, duration: 2, y: 0, scale: 1 }, "<")
+
+        .to(".step1", { opacity: 1, duration: 1.3, y: 0, }, "<")
+        .to(".step2", { opacity: 1, duration: 1.3, y: 0, }, "<0.7")
+        .to(".step3", { opacity: 1, duration: 1.3, y: 0, }, "<0.7")
+
+        .to(".se6_bubble1", { opacity: 1, duration: 0.7, y: 0 }, ">")
+        .to(".se6_bubble2", { opacity: 1, duration: 0.7, y: 0 }, ">");
+
+
+
 });
 

@@ -510,12 +510,10 @@ button:hover {
     margin-top: 50px;
     margin-bottom: 50px;
     background-color: #B1D8FC;
-    rotate: 9deg;
 }
 
 .swiper-slide img {
     max-width: 30vw;
-    rotate: 16deg;
 }
 
 .swiper-button-pagination {
