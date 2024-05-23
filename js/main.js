@@ -143,7 +143,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     const swiper = new Swiper('.swiper', {
-        mousewheel: true,
         keyboard: true,
         spaceBetween: 30,
         centeredSlides: true,
@@ -217,6 +216,7 @@ document.addEventListener('DOMContentLoaded', function () {
         .to(".se6_bubble2", { opacity: 1, duration: 0.7, y: 0 }, ">");
 
 
+        
 
 });
 

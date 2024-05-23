@@ -32,6 +32,7 @@ body {
 .main_menu {
     display: flex;
     align-items: center;
+    margin-right: 5px;
 }
 
 .logo {
@@ -97,19 +98,22 @@ body {
     flex-direction: column;
     align-items: center;
 }
-.submenu ul li{
+
+.submenu ul li {
     color: rgb(0 0 0 / 65%)
 }
 
 .main_menu ul li:hover .submenu {
     opacity: 1;
     visibility: visible;
-   
+
 }
+
 .main_menu ul li:hover::after {
     transform: rotate(180deg);
     transition: 0.5s ease;
 }
+
 .sub_menu ul {
     display: flex;
     align-items: center;
@@ -157,7 +161,8 @@ body {
 }
 
 
-.login, .Request {
+.login,
+.Request {
     border: 1px solid rgb(0 0 0 / 25%);
     border-radius: 30px;
     padding: 9px 21px;
@@ -165,8 +170,86 @@ body {
 
 .Request {
     background-color: rgb(0 0 0 / 75%);
-    color: white !important;
+    color: white;
 }
+
+.sub_menu .Request {
+    color: #fff;
+}
+
+@media screen and (max-width:1367px) {
+    .logo {
+        font-size: 30px;
+    }
+
+    .main_menu ul li {
+        font-size: 15px;
+    }
+
+    .sub_menu ul li {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:1260px) {
+    .main_menu ul {
+        gap: 30px;
+    }
+
+    .logo {
+        font-size: 26px;
+    }
+
+    .main_menu ul li {
+        font-size: 14px;
+    }
+
+    .sub_menu ul li {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:1162px) {
+
+
+    .main_menu ul li {
+        font-size: 13px;
+    }
+
+    .sub_menu ul li {
+        font-size: 13px;
+    }
+
+    .world {
+        padding: 4px 13px;
+    }
+
+    .login,
+    .Request {
+        padding: 9px 13px;
+    }
+
+}
+
+@media screen and (max-width:1075px) {
+    .main_menu ul {
+        gap: 25px;
+    }
+
+    .logo {
+        padding-right: 25px;
+        font-size: 24px;
+    }
+
+    .main_menu ul li {
+        font-size: 12px;
+    }
+
+    .sub_menu ul li {
+        font-size: 12px;
+    }
+}
+
 /* section_1 */
 .section_1 {
     background-color: #B1D8FC;
@@ -221,6 +304,7 @@ body {
 
 .chatbubble {
     position: absolute;
+    max-width: 50%;
 }
 
 .bubble1 {
@@ -231,16 +315,98 @@ body {
 .bubble2 {
     left: -80px;
     top: 104px;
+    height: 45px;
 }
 
 .bubble3 {
     right: -30px;
-    bottom: 190px;
+    bottom: 130px;
+    height: 45px;
 }
 
 .bubble4 {
     left: -162px;
     bottom: 40px;
+}
+
+.section_1 .Request:hover {
+    background-color: #fff;
+    color: #000;
+    transition: 0.5s;
+}
+
+@media screen and (max-width:1360px) {
+    .multiline-text {
+        font-size: 48px;
+    }
+
+    .section_1 p {
+        font-size: 15px;
+    }
+
+    .section_1 p::before {
+        height: 22px;
+        width: 22px;
+    }
+
+    .section_1 .Request {
+        padding: 12px 24px;
+    }
+
+    .bubble2 {
+        left: -25px;
+    }
+
+    .bubble4 {
+        left: -90px;
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .bubble1 {
+        right: -20px;
+    }
+
+    .bubble2 {
+        height: 36px;
+    }
+
+    .bubble3 {
+        height: 36px;
+        right: -10;
+    }
+
+    .multiline-text {
+        font-size: 43px;
+    }
+
+    .section_1 p {
+        font-size: 13px;
+    }
+
+    .section_1 .Request {
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (max-width:880px) {
+    .section_1 .wrap {
+        padding-bottom: 140px;
+        gap: 70px;
+        flex-direction: column;
+    }
+
+    .multiline-text {
+        padding-top: 70px;
+    }
+
+    .se1_main_img {
+        width: 450px;
+    }
+
+    .bubble2 {
+        top: 65px;
+    }
 }
 
 /* section_2 */
@@ -389,6 +555,7 @@ button {
 button:hover {
     background-color: #323232;
     color: #fff;
+    transition: 0.5s;
 }
 
 .card img {
