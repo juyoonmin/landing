@@ -216,7 +216,10 @@ document.addEventListener('DOMContentLoaded', function () {
         .to(".se6_bubble2", { opacity: 1, duration: 0.7, y: 0 }, ">");
 
 
-        
+        document.getElementById('hamburger').addEventListener('click', function () {
+            this.classList.toggle('menu_active');
+            document.getElementById('submenubox').classList.toggle('menu_active');
+        });
 
 });
 
