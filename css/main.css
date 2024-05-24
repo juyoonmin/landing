@@ -73,7 +73,8 @@ body {
     display: inline-block;
     margin-left: 3px;
 }
-.submenubox{
+
+.submenubox {
     display: flex;
     width: 100%;
     align-items: center;
@@ -197,6 +198,7 @@ body {
     margin: 4px 0;
     transition: all 0.3s ease;
 }
+
 .hamburger.menu_active span:nth-child(1) {
     transform: rotate(45deg) translate(8px, 5px);
 }
@@ -250,7 +252,7 @@ body {
         padding: 4px 13px;
     }
 
-   
+
 
 }
 
@@ -270,21 +272,26 @@ body {
     .submenubox ul li {
         font-size: 17px;
     }
-    .sub_menu ul li{
+
+    .sub_menu ul li {
         font-size: 14px;
     }
-    .submenubox{
+
+    .submenubox {
         flex-direction: column;
         gap: 25px;
     }
+
     .main_menu {
         margin-right: 0;
         flex-direction: column;
     }
-    .submenubox ul{
+
+    .submenubox ul {
         gap: 35px;
     }
 }
+
 @media screen and (max-width:720px) {
     .logo .hamburger {
         display: flex;
@@ -297,6 +304,7 @@ body {
         align-items: center;
         padding-bottom: 0;
     }
+
     .submenubox {
         height: 0;
         overflow: hidden;
@@ -304,27 +312,32 @@ body {
         display: flex;
         justify-content: center;
     }
-    .submenubox.menu_active{
+
+    .submenubox.menu_active {
         display: flex;
         flex-direction: column;
         height: 98vh;
         align-items: center;
         justify-content: center;
     }
-    .submenubox ul{
+
+    .submenubox ul {
         flex-direction: column;
     }
-    .sub_menu ul{
+
+    .sub_menu ul {
         display: flex;
         flex-direction: row;
         padding-top: 100px;
     }
-    .submenubox .navul{
+
+    .submenubox .navul {
         gap: 100px;
     }
 }
-@media screen and (max-width:413px){
-    .submenubox .sub_menu ul{
+
+@media screen and (max-width:413px) {
+    .submenubox .sub_menu ul {
         gap: 10px;
     }
 }
@@ -487,31 +500,39 @@ body {
         top: 65px;
     }
 }
-@media screen and (max-width:720px){
+
+@media screen and (max-width:720px) {
     .bubble4 {
         left: -30px;
     }
 }
-@media screen and (max-width:530px){
+
+@media screen and (max-width:530px) {
     .bubble2 {
         height: 27px;
         left: 30px;
         top: 70px;
     }
+
     .bubble1 {
         right: 10px;
     }
+
     .bubble3 {
         bottom: 75px;
         height: 27px;
         right: 30px;
     }
+
     .bubble4 {
         left: 20px;
     }
 }
-@media screen and (max-width:400px){
-    .bubble2,.bubble3{
+
+@media screen and (max-width:400px) {
+
+    .bubble2,
+    .bubble3 {
         height: 22px;
     }
 }
@@ -559,6 +580,43 @@ body {
 
 .logos img:hover {
     opacity: 1;
+}
+
+@media screen and (max-width:891px) {
+    .trusted-by-header {
+        font-size: 35px;
+        margin-bottom: 60px;
+    }
+
+    .logos {
+        gap: 30px;
+    }
+
+    .logos img {
+        max-width: 14%;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .trusted-by-header {
+        font-size: 25px;
+        margin-bottom: 50px;
+    }
+
+    .logos img {
+        max-width: 13%;
+    }
+}
+
+@media screen and (max-width:464px) {
+    .trusted-by-header {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    .logos img {
+        max-width: 12%;
+    }
 }
 
 /* section_3 */
@@ -679,7 +737,7 @@ button:hover {
 .custom-line {
     height: 2px;
     background-color: rgb(255 255 255 / 15%);
-    width: 1196px;
+    max-width: 1196px;
     margin: 0 auto;
 }
 
@@ -701,6 +759,181 @@ button:hover {
     color: #fff;
     font-weight: 200;
     padding-top: 20px;
+}
+
+@media screen and (max-width:1295px) {
+    .counter {
+        font-size: 70px;
+        gap: 0;
+        justify-content: space-around;
+    }
+
+    .counter p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:1164px) {
+    .card h3 {
+        font-size: 35px;
+    }
+
+    .card p {
+        font-size: 12px;
+    }
+
+    .card_container button {
+        font-size: 13px;
+    }
+
+    .card_container {
+        padding: 50px 50px;
+    }
+
+    .counter {
+        font-size: 60px;
+    }
+
+    .counter p {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:1052px) {
+    .section_3_text p {
+        font-size: 56px;
+    }
+
+    .card h3 {
+        font-size: 30px;
+    }
+
+    .card p {
+        font-size: 11px;
+    }
+
+    .card_container button {
+        font-size: 12px;
+    }
+
+    .counter {
+        font-size: 50px;
+    }
+
+    .counter p {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:945px) {
+    .section_3_text p {
+        font-size: 50px;
+    }
+
+    .card h3 {
+        font-size: 25px;
+    }
+
+    .card p {
+        font-size: 10.5px;
+    }
+
+    .card_container button {
+        font-size: 11px;
+    }
+
+    .card_container {
+        padding: 35px 50px;
+    }
+}
+
+@media screen and (max-width:880px) {
+    .section_3_cardbox {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 0;
+    }
+
+    .card h3 {
+        font-size: 30px;
+    }
+
+    .card p {
+        font-size: 12px;
+    }
+
+    .card_container button {
+        font-size: 13px;
+    }
+
+    .counter {
+        font-size: 45px;
+    }
+}
+
+@media screen and (max-width:720px) {
+    .counter {
+        font-size: 65px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+        padding-left: 40px;
+    }
+    .counter p{
+        padding-top: 10px;
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width:510px) {
+    .section_3_text p {
+        font-size: 40px;
+    }
+
+    .card h3 {
+        font-size: 25px;
+    }
+
+    .card p {
+        font-size: 10.5px;
+    }
+
+    .card_container button {
+        font-size: 11px;
+    }
+    .counter {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width:426px) {
+    .section_3_text p {
+        font-size: 35px;
+    }
+
+    .card h3 {
+        font-size: 20px;
+    }
+    .counter {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width:385px) {
+    .section_3_text p {
+        font-size: 30px;
+    }
+
+    .card h3 {
+        font-size: 19px;
+    }
+
+    .card_container button {
+        font-size: 10px;
+    }
+    .counter {
+        font-size: 45px;
+    }
 }
 
 /* section_4 */
