@@ -879,7 +879,8 @@ button:hover {
         gap: 40px;
         padding-left: 40px;
     }
-    .counter p{
+
+    .counter p {
         padding-top: 10px;
         font-size: 13px;
     }
@@ -901,6 +902,7 @@ button:hover {
     .card_container button {
         font-size: 11px;
     }
+
     .counter {
         font-size: 50px;
     }
@@ -914,6 +916,7 @@ button:hover {
     .card h3 {
         font-size: 20px;
     }
+
     .counter {
         font-size: 50px;
     }
@@ -931,6 +934,7 @@ button:hover {
     .card_container button {
         font-size: 10px;
     }
+
     .counter {
         font-size: 45px;
     }
@@ -940,6 +944,7 @@ button:hover {
 .section_4 {
     margin: 100px 0;
 }
+
 
 .section_4_text {
     text-align: center;
@@ -1012,13 +1017,10 @@ button:hover {
 .section_4_content2 {
     margin-top: 200px;
     display: flex;
-    /* justify-content: space-around; */
+    justify-content: space-around;
     align-items: center;
 }
 
-.section_4_content2 .section_4_content_text {
-    margin-left: 15%;
-}
 
 .section_4_content2 .section_4_content_img {
     background-color: #ffeaff;
@@ -1037,6 +1039,184 @@ button:hover {
     color: #9149ED;
 }
 
+@media screen and (max-width:1460px) {
+    .section_4_text {
+        font-size: 54px;
+    }
+
+    .section_4_content_text h3 {
+        font-size: 32px;
+    }
+
+    .section_4_content_text p {
+        font-size: 13px;
+    }
+
+    .section_4_content_text button {
+        font-size: 13px;
+    }
+
+    .section_4_content_img img {
+        height: 440px;
+    }
+
+    .section_4_content2 .img3 {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width:1160px) {
+    .section_4_text {
+        font-size: 50px;
+    }
+
+    .section_4_content_text h3 {
+        font-size: 29px;
+    }
+
+    .section_4_content_text p {
+        font-size: 12px;
+    }
+
+    .section_4_content_text button {
+        font-size: 12px;
+    }
+
+    .section_4_content_img img {
+        height: 400px;
+    }
+
+    .section_4_content2 .img3 {
+        width: 360px;
+        height: 360px;
+    }
+}
+
+@media screen and (max-width:980px) {
+
+    .section_4_content_text h3 {
+        font-size: 27px;
+    }
+
+    .section_4_content_img img {
+        height: 360px;
+    }
+
+    .section_4_content2 .img3 {
+        width: 320px;
+        height: 320px;
+    }
+}
+@media screen and (max-width:880px){
+    .section_4_content{
+        flex-direction: column-reverse;
+        gap: 150px;
+    }
+    .section_4_content_text{
+        width: 50%;
+    }
+    .section_4_content_img{
+        gap: 40px;
+    }
+    .section_4_text {
+        font-size: 54px;
+    }
+
+    .section_4_content_text h3 {
+        font-size: 30px;
+    }
+
+    .section_4_content_text p {
+        font-size: 13px;
+    }
+
+    .section_4_content_text button {
+        font-size: 13px;
+    }
+    .section_4_content2{
+        gap: 70px;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:672px){
+    .section_4_content_text{
+        width: 66%;
+    }
+    .section_4_text{
+        font-size: 40px;
+    }
+    .section_4_content2 .section_4_content_img{
+        padding: 30px;
+    }
+}
+@media screen and (max-width:600px){
+    .section_4_content_text h3 {
+        font-size: 26px;
+    }
+
+    .section_4_content_text p {
+        font-size: 12px;
+    }
+
+    .section_4_content_text button {
+        font-size: 12px;
+    }
+
+    .section_4_content_img img {
+        height: 330px;
+    }
+
+    .section_4_content2 .img3 {
+        width: 290px;
+        height: 290px;
+    }
+    .section_4_content_img{
+        gap: 20px;
+    }
+    .section_4_text{
+        font-size: 35px;
+    }
+}
+@media screen and (max-width:520px){
+    .section_4_content_img img{
+        height: 300px;
+    }
+    .section_4_content2 .img3 {
+        width: 260px;
+        height: 260px;
+    }
+    .section_4_content_text {
+        width: 80%;
+    }
+}
+@media screen and (max-width:460px){
+    .section_4_content_img img{
+        height: 250px;
+    }
+    .section_4_content2 .img3 {
+        width: 230px;
+        height: 230px;
+    }
+    .section_4_content_text {
+        width: 70%;
+    }
+    .section_4_text{
+        font-size: 32px;
+    }
+}
+@media screen and (max-width:460px){
+    .section_4_content_img img{
+        height: 230px;
+    }
+    .section_4_content2 .img3 {
+        width: 220px;
+        height: 220px;
+    }
+    .section_4_content_text {
+        width: 76%;
+    }
+}
 
 /* section5 */
 

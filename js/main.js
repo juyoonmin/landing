@@ -62,58 +62,58 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // section_4 애니메이션
-    gsap.timeline({
-        scrollTrigger: {
-            trigger: '.section_4_content',
-            start: 'center center',
-            end: '700%',
-            scrub: 1,
-            ease: 'none',
-            pin: true,
-            // markers: true
-        }
-    })
-        .set(".section_4_content_text h3", { opacity: 0, y: 50 })
-        .set(".section_4_content_text p", { opacity: 0, y: 50 })
-        .set(".section_4_content_text button", { opacity: 0, y: 50 })
-        .set(".section_4_content .back1", { opacity: 0, y: -50, x: -50 })
-        .set(".section_4_content .img1", { opacity: 0, y: 50, x: 50 })
-        .set(".section_4_content .back2", { opacity: 0, y: -100 })
-        .set(".section_4_content .img2", { opacity: 0, y: 100 })
+    // gsap.timeline({
+    //     scrollTrigger: {
+    //         trigger: '.section_4_content',
+    //         start: 'center center',
+    //         end: '700%',
+    //         scrub: 1,
+    //         ease: 'none',
+    //         pin: true,
+    //         // markers: true
+    //     }
+    // })
+    //     .set(".section_4_content_text h3", { opacity: 0, y: 50 })
+    //     .set(".section_4_content_text p", { opacity: 0, y: 50 })
+    //     .set(".section_4_content_text button", { opacity: 0, y: 50 })
+    //     .set(".section_4_content .back1", { opacity: 0, y: -50, x: -50 })
+    //     .set(".section_4_content .img1", { opacity: 0, y: 50, x: 50 })
+    //     .set(".section_4_content .back2", { opacity: 0, y: -100 })
+    //     .set(".section_4_content .img2", { opacity: 0, y: 100 })
 
 
-        .to(".section_4_content_text h3", { opacity: 1, duration: 3, y: 0 })
-        .to(".section_4_content_text p", { opacity: 1, duration: 3, y: 0 })
-        .to(".section_4_content_text button", { opacity: 1, duration: 3, y: 0 })
-        .to(".section_4_content .back1", { opacity: 1, duration: 3, y: 0, x: 0 })
-        .to(".section_4_content .img1", { opacity: 1, duration: 3, y: 0, x: 0 })
-        .to(".section_4_content .back2", { opacity: 1, duration: 3, y: 0 })
-        .to(".section_4_content .img2", { opacity: 1, duration: 3, y: 0 });
-    gsap.timeline({
-        scrollTrigger: {
-            trigger: '.section_4_content2',
-            start: 'center center',
-            end: '700%',
-            scrub: 1,
-            ease: 'none',
-            pin: true,
-            // markers: true
-        }
-    })
-        .set(".section_4_content2 .section_4_content_img", { opacity: 0, y: 50 })
-        .set(".section_4_content2 .img3", { opacity: 0, y: 50 })
-        .set(".section_4_content2 .section_4_content_text", { opacity: 0, y: 50 })
-        .set(".section_4_content2 .section_4_content_text h3", { opacity: 0, y: 50 })
-        .set(".section_4_content2 .section_4_content_text p", { opacity: 0, y: 50 })
-        .set(".section_4_content2 .section_4_content_text button", { opacity: 0, y: 50 })
+    //     .to(".section_4_content_text h3", { opacity: 1, duration: 3, y: 0 })
+    //     .to(".section_4_content_text p", { opacity: 1, duration: 3, y: 0 })
+    //     .to(".section_4_content_text button", { opacity: 1, duration: 3, y: 0 })
+    //     .to(".section_4_content .back1", { opacity: 1, duration: 3, y: 0, x: 0 })
+    //     .to(".section_4_content .img1", { opacity: 1, duration: 3, y: 0, x: 0 })
+    //     .to(".section_4_content .back2", { opacity: 1, duration: 3, y: 0 })
+    //     .to(".section_4_content .img2", { opacity: 1, duration: 3, y: 0 });
+    // gsap.timeline({
+    //     scrollTrigger: {
+    //         trigger: '.section_4_content2',
+    //         start: 'center center',
+    //         end: '700%',
+    //         scrub: 1,
+    //         ease: 'none',
+    //         pin: true,
+    //         // markers: true
+    //     }
+    // })
+    //     .set(".section_4_content2 .section_4_content_img", { opacity: 0, y: 50 })
+    //     .set(".section_4_content2 .img3", { opacity: 0, y: 50 })
+    //     .set(".section_4_content2 .section_4_content_text", { opacity: 0, y: 50 })
+    //     .set(".section_4_content2 .section_4_content_text h3", { opacity: 0, y: 50 })
+    //     .set(".section_4_content2 .section_4_content_text p", { opacity: 0, y: 50 })
+    //     .set(".section_4_content2 .section_4_content_text button", { opacity: 0, y: 50 })
 
 
-        .to(".section_4_content2 .section_4_content_img", { opacity: 1, duration: 2, y: 0 })
-        .to(".section_4_content2 .img3", { opacity: 1, duration: 2, y: 0 })
-        .to(".section_4_content2 .section_4_content_text", { opacity: 1, duration: 0.1, y: 0 })
-        .to(".section_4_content2 .section_4_content_text h3", { opacity: 1, duration: 2, y: 0 })
-        .to(".section_4_content2 .section_4_content_text p", { opacity: 1, duration: 2, y: 0 })
-        .to(".section_4_content2 .section_4_content_text button", { opacity: 1, duration: 2, y: 0 });
+    //     .to(".section_4_content2 .section_4_content_img", { opacity: 1, duration: 2, y: 0 })
+    //     .to(".section_4_content2 .img3", { opacity: 1, duration: 2, y: 0 })
+    //     .to(".section_4_content2 .section_4_content_text", { opacity: 1, duration: 0.1, y: 0 })
+    //     .to(".section_4_content2 .section_4_content_text h3", { opacity: 1, duration: 2, y: 0 })
+    //     .to(".section_4_content2 .section_4_content_text p", { opacity: 1, duration: 2, y: 0 })
+    //     .to(".section_4_content2 .section_4_content_text button", { opacity: 1, duration: 2, y: 0 });
 
 
 
