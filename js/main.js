@@ -62,58 +62,60 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // section_4 애니메이션
-    // gsap.timeline({
-    //     scrollTrigger: {
-    //         trigger: '.section_4_content',
-    //         start: 'center center',
-    //         end: '700%',
-    //         scrub: 1,
-    //         ease: 'none',
-    //         pin: true,
-    //         // markers: true
-    //     }
-    // })
-    //     .set(".section_4_content_text h3", { opacity: 0, y: 50 })
-    //     .set(".section_4_content_text p", { opacity: 0, y: 50 })
-    //     .set(".section_4_content_text button", { opacity: 0, y: 50 })
-    //     .set(".section_4_content .back1", { opacity: 0, y: -50, x: -50 })
-    //     .set(".section_4_content .img1", { opacity: 0, y: 50, x: 50 })
-    //     .set(".section_4_content .back2", { opacity: 0, y: -100 })
-    //     .set(".section_4_content .img2", { opacity: 0, y: 100 })
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: '.section_4_content',
+            start: 'center center',
+            end: '700%',
+            scrub: 1,
+            ease: 'none',
+            pin: true,
+            // markers: true
+        }
+    })
+        .set(".section_4_content_text h3", { opacity: 0, y: 50 })
+        .set(".section_4_content_text p", { opacity: 0, y: 50 })
+        .set(".section_4_content_text button", { opacity: 0, y: 50 })
+        .set(".section_4_content .back1", { opacity: 0, y: -50, x: -50 })
+        .set(".section_4_content .img1", { opacity: 0, y: 50, x: 50 })
+        .set(".section_4_content .back2", { opacity: 0, y: -100 })
+        .set(".section_4_content .img2", { opacity: 0, y: 100 })
 
 
-    //     .to(".section_4_content_text h3", { opacity: 1, duration: 3, y: 0 })
-    //     .to(".section_4_content_text p", { opacity: 1, duration: 3, y: 0 })
-    //     .to(".section_4_content_text button", { opacity: 1, duration: 3, y: 0 })
-    //     .to(".section_4_content .back1", { opacity: 1, duration: 3, y: 0, x: 0 })
-    //     .to(".section_4_content .img1", { opacity: 1, duration: 3, y: 0, x: 0 })
-    //     .to(".section_4_content .back2", { opacity: 1, duration: 3, y: 0 })
-    //     .to(".section_4_content .img2", { opacity: 1, duration: 3, y: 0 });
-    // gsap.timeline({
-    //     scrollTrigger: {
-    //         trigger: '.section_4_content2',
-    //         start: 'center center',
-    //         end: '700%',
-    //         scrub: 1,
-    //         ease: 'none',
-    //         pin: true,
-    //         // markers: true
-    //     }
-    // })
-    //     .set(".section_4_content2 .section_4_content_img", { opacity: 0, y: 50 })
-    //     .set(".section_4_content2 .img3", { opacity: 0, y: 50 })
-    //     .set(".section_4_content2 .section_4_content_text", { opacity: 0, y: 50 })
-    //     .set(".section_4_content2 .section_4_content_text h3", { opacity: 0, y: 50 })
-    //     .set(".section_4_content2 .section_4_content_text p", { opacity: 0, y: 50 })
-    //     .set(".section_4_content2 .section_4_content_text button", { opacity: 0, y: 50 })
+        .to(".section_4_content_text h3", { opacity: 1, duration: 3, y: 0 })
+        .to(".section_4_content_text p", { opacity: 1, duration: 3, y: 0 })
+        .to(".section_4_content_text button", { opacity: 1, duration: 3, y: 0 })
+        .to(".section_4_content .back1", { opacity: 1, duration: 3, y: 0, x: 0 })
+        .to(".section_4_content .img1", { opacity: 1, duration: 3, y: 0, x: 0 })
+        .to(".section_4_content .back2", { opacity: 1, duration: 3, y: 0 })
+        .to(".section_4_content .img2", { opacity: 1, duration: 3, y: 0 });
 
 
-    //     .to(".section_4_content2 .section_4_content_img", { opacity: 1, duration: 2, y: 0 })
-    //     .to(".section_4_content2 .img3", { opacity: 1, duration: 2, y: 0 })
-    //     .to(".section_4_content2 .section_4_content_text", { opacity: 1, duration: 0.1, y: 0 })
-    //     .to(".section_4_content2 .section_4_content_text h3", { opacity: 1, duration: 2, y: 0 })
-    //     .to(".section_4_content2 .section_4_content_text p", { opacity: 1, duration: 2, y: 0 })
-    //     .to(".section_4_content2 .section_4_content_text button", { opacity: 1, duration: 2, y: 0 });
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: '.section_4_content2',
+            start: 'center center',
+            end: '700%',
+            scrub: 1,
+            ease: 'none',
+            pin: true,
+            // markers: true
+        }
+    })
+        .set(".section_4_content2 .section_4_content_img", { opacity: 0, y: 50 })
+        .set(".section_4_content2 .img3", { opacity: 0, y: 50 })
+        .set(".section_4_content2 .section_4_content_text", { opacity: 0, y: 50 })
+        .set(".section_4_content2 .section_4_content_text h3", { opacity: 0, y: 50 })
+        .set(".section_4_content2 .section_4_content_text p", { opacity: 0, y: 50 })
+        .set(".section_4_content2 .section_4_content_text button", { opacity: 0, y: 50 })
+
+
+        .to(".section_4_content2 .section_4_content_img", { opacity: 1, duration: 2, y: 0 })
+        .to(".section_4_content2 .img3", { opacity: 1, duration: 2, y: 0 })
+        .to(".section_4_content2 .section_4_content_text", { opacity: 1, duration: 0.1, y: 0 })
+        .to(".section_4_content2 .section_4_content_text h3", { opacity: 1, duration: 2, y: 0 })
+        .to(".section_4_content2 .section_4_content_text p", { opacity: 1, duration: 2, y: 0 })
+        .to(".section_4_content2 .section_4_content_text button", { opacity: 1, duration: 2, y: 0 });
 
 
 
@@ -137,9 +139,10 @@ document.addEventListener('DOMContentLoaded', function () {
         .to(".swiper-slide:nth-child(1) .section_4_content_text h3", { opacity: 1, duration: 0.7, x: 0 }, 'PStart')
         .to(".swiper-slide:nth-child(1) .swiper_imgbox", { opacity: 1, duration: 0.7, y: 0, x: 0, scale: 1 }, 'PStart')
         .to(".swiper-slide:nth-child(1) .swiper_imgbox img", { opacity: 1, duration: 0.7, y: 0, x: 0, scale: 1 }, 'PStart')
-        .to(".swiper-slide:nth-child(1) .swiper_imgbox img", { rotation: 10, duration: 0.7 })
-        .to(".swiper-slide:nth-child(1) .section_4_content_text p", { opacity: 1, duration: 0.3, x: 0 })
-        .to(".swiper-slide:nth-child(1) .section_4_content_text button", { opacity: 1, duration: 0.3, x: 0 });
+        .addLabel('PEnd')
+        .to(".swiper-slide:nth-child(1) .swiper_imgbox img", { rotation: 10, duration: 0.5 }, 'PEnd')
+        .to(".swiper-slide:nth-child(1) .section_4_content_text p", { opacity: 1, duration: 0.5, x: 0 }, 'PEnd')
+        .to(".swiper-slide:nth-child(1) .section_4_content_text button", { opacity: 1, duration: 0.5, x: 0 });
 
 
     const swiper = new Swiper('.swiper', {
@@ -173,15 +176,15 @@ document.addEventListener('DOMContentLoaded', function () {
                         .to(activeSlide.querySelector('.section_4_content_text h3'), { opacity: 1, duration: 0.7, x: 0 }, 'PStart')
                         .to(activeSlide.querySelector('.swiper_imgbox'), { opacity: 1, duration: 0.7, y: 0, x: 0, scale: 1 }, 'PStart')
                         .to(activeSlide.querySelector('.swiper_imgbox img'), { opacity: 1, duration: 0.7, y: 0, x: 0, scale: 1 }, 'PStart')
-                        .to(activeSlide.querySelector('.swiper_imgbox img'), { rotation: 10, duration: 0.7 },)
-                        .to(activeSlide.querySelector('.section_4_content_text p'), { opacity: 1, duration: 0.3, x: 0 },)
-                        .to(activeSlide.querySelector('.section_4_content_text button'), { opacity: 1, duration: 0.3, x: 0 });
+                        .addLabel('PEnd')
+                        .to(activeSlide.querySelector('.swiper_imgbox img'), { rotation: 10, duration: 0.5 }, 'PEnd')
+                        .to(activeSlide.querySelector('.section_4_content_text p'), { opacity: 1, duration: 0.5, x: 0 }, 'PEnd')
+                        .to(activeSlide.querySelector('.section_4_content_text button'), { opacity: 1, duration: 0.5, x: 0 });
 
                 }
             },
         },
     });
-
 
 
     // section_6
@@ -216,10 +219,10 @@ document.addEventListener('DOMContentLoaded', function () {
         .to(".se6_bubble2", { opacity: 1, duration: 0.7, y: 0 }, ">");
 
 
-        document.getElementById('hamburger').addEventListener('click', function () {
-            this.classList.toggle('menu_active');
-            document.getElementById('submenubox').classList.toggle('menu_active');
-        });
+    document.getElementById('hamburger').addEventListener('click', function () {
+        this.classList.toggle('menu_active');
+        document.getElementById('submenubox').classList.toggle('menu_active');
+    });
 
 });
 

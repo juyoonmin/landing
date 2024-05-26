@@ -1311,6 +1311,103 @@ button:hover {
         max-width: 550px;
     }
 }
+@media screen and (max-width:1271px){
+    .section_5_text{
+        font-size: 50px;
+    }
+    .section_5 .section_4_content_text h3{
+        font-size: 27px;
+    }
+}
+@media screen and (max-width:1072px){
+    .section_5_text{
+        font-size: 45px;
+    }
+    .section_5 .section_4_content_text h3{
+        font-size: 23px;
+    }
+}
+@media screen and (max-width:880px) {
+    .swiper {
+        width: 90%;
+    }
+    .section_5 .section_4_content_text{
+        width: 60%;
+        margin-top: 115px;
+        margin-bottom: 50px;
+    }
+    .swiper .swiper-slide{
+        background: linear-gradient(to top, #B1D8FC 37%, #fff 45%);
+        flex-direction: column-reverse;
+    }
+    .swiper-slide img{
+        max-width: 45vw;
+    }
+    .section_5_text{
+        font-size: 41px;
+    }
+    .swiper_imgbox{
+        margin-top: 65px;
+        margin-bottom: 0;
+    }
+    .section_5 .section_4_content_text h3{
+        font-size: 28px;
+    }
+    .section_5 .section_4_content_text p{
+        font-size: 12px;
+    }
+    .section_5 .section_4_content_text button{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width:720px){
+    .section_5_text{
+        font-size: 36px;
+    }
+    .section_5 .section_4_content_text h3{
+        font-size: 24px;
+    }
+    .section_5 .section_4_content_text{
+        gap: 20px;
+    }
+}
+@media screen and (max-width:628px){
+    .section_5_text{
+        font-size: 32px;
+    }
+    .section_5 .section_4_content_text h3{
+        font-size: 20px;
+    }
+    .section_5 .section_4_content_text button{
+        font-size: 11px;
+    }
+    .section_5 .section_4_content_text{
+        margin-top: 60px;
+    }
+}
+@media screen and (max-width:510px){
+    .section_5_text{
+        font-size: 28px;
+    }
+    .section_5 .section_4_content_text h3{
+        font-size: 17px;
+    }
+    .section_5 .section_4_content_text p{
+        font-size: 10px;
+    }
+    .section_5 .section_4_content_text button{
+        font-size: 10px;
+        padding: 7px 13px;
+    }
+}
+@media screen and (max-width:445px){
+    .section_5_text{
+        font-size: 25px;
+    }
+    .section_5 .section_4_content_text h3{
+        font-size: 3.8vw;
+    }
+}
 
 /* section6 */
 
