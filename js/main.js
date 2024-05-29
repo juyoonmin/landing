@@ -131,16 +131,16 @@ document.addEventListener('DOMContentLoaded', function () {
         .set(".swiper-slide:nth-child(1) .section_4_content_text h3", { opacity: 0, x: -50, })
         .set(".swiper-slide:nth-child(1) .section_4_content_text p", { opacity: 0, x: -50, })
         .set(".swiper-slide:nth-child(1) .section_4_content_text button", { opacity: 0, x: -50, })
-        .set(".swiper-slide:nth-child(1) .swiper_imgbox", { opacity: 0, scale: 0.8 })
-        .set(".swiper-slide:nth-child(1) .swiper_imgbox img", { opacity: 0, rotation: 0, scale: 0.8 })
+        .set(".swiper-slide:nth-child(1) .swiper_imgback", { opacity: 0, scale: 0.8 })
+        .set(".swiper-slide:nth-child(1) .swiper_imgback img", { opacity: 0, rotation: 0, scale: 0.8 })
 
         .to(".swiper-slide:nth-child(1) .section_4_content_text", { opacity: 1, duration: 0.5 })
         .addLabel('PStart')
         .to(".swiper-slide:nth-child(1) .section_4_content_text h3", { opacity: 1, duration: 0.7, x: 0 }, 'PStart')
-        .to(".swiper-slide:nth-child(1) .swiper_imgbox", { opacity: 1, duration: 0.7, y: 0, x: 0, scale: 1 }, 'PStart')
-        .to(".swiper-slide:nth-child(1) .swiper_imgbox img", { opacity: 1, duration: 0.7, y: 0, x: 0, scale: 1 }, 'PStart')
+        .to(".swiper-slide:nth-child(1) .swiper_imgback", { opacity: 1, duration: 0.7, y: 0, x: 0, scale: 1 }, 'PStart')
+        .to(".swiper-slide:nth-child(1) .swiper_imgback img", { opacity: 1, duration: 0.7, y: 0, x: 0, scale: 1 }, 'PStart')
         .addLabel('PEnd')
-        .to(".swiper-slide:nth-child(1) .swiper_imgbox img", { rotation: 10, duration: 0.5 }, 'PEnd')
+        .to(".swiper-slide:nth-child(1) .swiper_imgback img", { rotation: 10, duration: 0.5 }, 'PEnd')
         .to(".swiper-slide:nth-child(1) .section_4_content_text p", { opacity: 1, duration: 0.5, x: 0 }, 'PEnd')
         .to(".swiper-slide:nth-child(1) .section_4_content_text button", { opacity: 1, duration: 0.5, x: 0 });
 
@@ -168,16 +168,16 @@ document.addEventListener('DOMContentLoaded', function () {
                         .set(activeSlide.querySelector('.section_4_content_text h3'), { opacity: 0, x: -50 })
                         .set(activeSlide.querySelector('.section_4_content_text p'), { opacity: 0, x: -50 })
                         .set(activeSlide.querySelector('.section_4_content_text button'), { opacity: 0, x: -50 })
-                        .set(activeSlide.querySelector('.swiper_imgbox'), { opacity: 0, scale: 0.8 })
-                        .set(activeSlide.querySelector('.swiper_imgbox img'), { opacity: 0, rotation: 0, scale: 0.8 });
+                        .set(activeSlide.querySelector('.swiper_imgback'), { opacity: 0, scale: 0.8 })
+                        .set(activeSlide.querySelector('.swiper_imgback img'), { opacity: 0, rotation: 0, scale: 0.8 });
 
                     tl.to(activeSlide.querySelector('.section_4_content_text'), { opacity: 1, duration: 0.5 })
                         .addLabel('PStart')
                         .to(activeSlide.querySelector('.section_4_content_text h3'), { opacity: 1, duration: 0.7, x: 0 }, 'PStart')
-                        .to(activeSlide.querySelector('.swiper_imgbox'), { opacity: 1, duration: 0.7, y: 0, x: 0, scale: 1 }, 'PStart')
-                        .to(activeSlide.querySelector('.swiper_imgbox img'), { opacity: 1, duration: 0.7, y: 0, x: 0, scale: 1 }, 'PStart')
+                        .to(activeSlide.querySelector('.swiper_imgback'), { opacity: 1, duration: 0.7, y: 0, x: 0, scale: 1 }, 'PStart')
+                        .to(activeSlide.querySelector('.swiper_imgback img'), { opacity: 1, duration: 0.7, y: 0, x: 0, scale: 1 }, 'PStart')
                         .addLabel('PEnd')
-                        .to(activeSlide.querySelector('.swiper_imgbox img'), { rotation: 10, duration: 0.5 }, 'PEnd')
+                        .to(activeSlide.querySelector('.swiper_imgback img'), { rotation: 10, duration: 0.5 }, 'PEnd')
                         .to(activeSlide.querySelector('.section_4_content_text p'), { opacity: 1, duration: 0.5, x: 0 }, 'PEnd')
                         .to(activeSlide.querySelector('.section_4_content_text button'), { opacity: 1, duration: 0.5, x: 0 });
 
