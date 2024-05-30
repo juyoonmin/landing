@@ -1071,10 +1071,6 @@ button:hover {
 
 
 @media screen and (max-width:1260px) {
-    .section_4_text {
-        font-size: 50px;
-    }
-
     .section_4_content_text h3 {
         font-size: 35px;
     }
@@ -1106,6 +1102,9 @@ button:hover {
     .section_4_content_text button {
         font-size: 15px;
     }
+    .section_4_text {
+        font-size: 55px;
+    }
 }
 
 @media screen and (max-width:720px) {
@@ -1132,7 +1131,7 @@ button:hover {
     }
 
     .section_4_text {
-        font-size: 54px;
+        font-size: 52px;
         margin-bottom: 0;
     }
 
@@ -1160,13 +1159,13 @@ button:hover {
 
 @media screen and (max-width:672px) {
     .section_4_text {
-        font-size: 40px;
+        font-size: 45px;
     }
 }
 
 @media screen and (max-width:445px) {
     .section_4_text {
-        font-size: 35px;
+        font-size: 37px;
     }
 
     .section_4_content_text h3 {
@@ -1429,7 +1428,6 @@ button:hover {
 .section_6_content {
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     gap: 20px;
 }
 
@@ -1439,7 +1437,6 @@ button:hover {
     justify-content: center;
     align-items: center;
     border-radius: 30px;
-    /* padding: 50px; */
     width: 50%;
 }
 
@@ -1453,7 +1450,7 @@ button:hover {
 
 .section_6_imgbox .se6_img {
     width: 80%;
-    border-radius: 130px;
+    border-radius: 25%;
 }
 
 .se6_bubble1 {
@@ -1551,6 +1548,69 @@ button:hover {
     color: #fff;
 }
 
+@media screen and (max-width: 1360px){
+    .se6_bubble1{
+        top: 80px;
+    }
+    .se6_bubble2{
+        bottom: 110px;
+    }
+}
+@media screen and (max-width: 1200px){
+    .se6_bubble1{
+        height: 45px;
+    }
+    .se6_bubble2{
+        height: 45px;
+    }
+}
+@media screen and (max-width: 1200px){
+    .se6_bubble1{
+        height: 42px;
+    }
+    .se6_bubble2{
+        height: 42px;
+    }
+}
+@media screen and (max-width: 880px) {
+    .section_6_content{
+        flex-direction: column;
+    }
+    .section_6_img{
+        width: 100%;
+    }
+    .steps{
+        width: 100%;
+    }
+    .se6_bubble1{
+        height: auto;
+        top: 150;
+    }
+    .se6_bubble2{
+        height: auto;
+        bottom: 205px;
+    }
+}
+@media screen and (max-width: 850px) {
+    .section_6_text{
+        font-size: 55px;
+    }
+}
+@media screen and (max-width: 720px) {
+    .section_6_text{
+        font-size: 52px;
+    }
+}
+@media screen and (max-width: 672px) {
+    .section_6_text{
+        font-size: 45px;
+    }
+}
+@media screen and (max-width: 445px) {
+    .section_6_text{
+        font-size: 37px;
+    }
+}
 /* footer */
 .footer {
     /* padding: 50px; */

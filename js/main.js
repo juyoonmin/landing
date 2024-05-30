@@ -189,34 +189,34 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // section_6
 
-    gsap.timeline({
-        scrollTrigger: {
-            trigger: '.section_6_content',
-            start: 'center center',
-            end: '700%',
-            scrub: 1,
-            ease: 'none',
-            pin: true,
-            // markers: true,
-        }
-    })
-        .set(".section_6_img", { opacity: 0, y: 50, scale: 0.8 })
-        .set(".se6_img", { opacity: 0, y: 50, scale: 0.8 })
-        .set(".se6_bubble1", { opacity: 0, y: 50 })
-        .set(".se6_bubble2", { opacity: 0, y: 50 })
-        .set(".step1", { opacity: 0, y: -50 })
-        .set(".step2", { opacity: 0, y: -50 })
-        .set(".step3", { opacity: 0, y: -50 })
+    // gsap.timeline({
+    //     scrollTrigger: {
+    //         trigger: '.section_6_content',
+    //         start: 'center center',
+    //         end: '700%',
+    //         scrub: 1,
+    //         ease: 'none',
+    //         pin: true,
+    //         // markers: true,
+    //     }
+    // })
+    //     .set(".section_6_img", { opacity: 0, y: 50, scale: 0.8 })
+    //     .set(".se6_img", { opacity: 0, y: 50, scale: 0.8 })
+    //     .set(".se6_bubble1", { opacity: 0, y: 50 })
+    //     .set(".se6_bubble2", { opacity: 0, y: 50 })
+    //     .set(".step1", { opacity: 0, y: -50 })
+    //     .set(".step2", { opacity: 0, y: -50 })
+    //     .set(".step3", { opacity: 0, y: -50 })
 
-        .to(".section_6_img", { opacity: 1, duration: 2, y: 0, scale: 1 })
-        .to(".se6_img", { opacity: 1, duration: 2, y: 0, scale: 1 }, "<")
+    //     .to(".section_6_img", { opacity: 1, duration: 2, y: 0, scale: 1 })
+    //     .to(".se6_img", { opacity: 1, duration: 2, y: 0, scale: 1 }, "<")
 
-        .to(".step1", { opacity: 1, duration: 1.3, y: 0, }, "<")
-        .to(".step2", { opacity: 1, duration: 1.3, y: 0, }, "<0.7")
-        .to(".step3", { opacity: 1, duration: 1.3, y: 0, }, "<0.7")
+    //     .to(".step1", { opacity: 1, duration: 1.3, y: 0, }, "<")
+    //     .to(".step2", { opacity: 1, duration: 1.3, y: 0, }, "<0.7")
+    //     .to(".step3", { opacity: 1, duration: 1.3, y: 0, }, "<0.7")
 
-        .to(".se6_bubble1", { opacity: 1, duration: 0.7, y: 0 }, ">")
-        .to(".se6_bubble2", { opacity: 1, duration: 0.7, y: 0 }, ">");
+    //     .to(".se6_bubble1", { opacity: 1, duration: 0.7, y: 0 }, ">")
+    //     .to(".se6_bubble2", { opacity: 1, duration: 0.7, y: 0 }, ">");
 
 
     document.getElementById('hamburger').addEventListener('click', function () {
