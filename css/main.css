@@ -54,11 +54,17 @@ body {
     justify-content: center;
     align-items: center;
 }
+.submenubox nav{
+    flex: 1;
+}
 
 .submenubox ul {
     display: flex;
-    gap: 40px;
+    gap: 5px;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
 }
 
 .submenubox ul li {
@@ -86,6 +92,7 @@ body {
     width: 100%;
     align-items: center;
     justify-content: space-between;
+    gap: 10px;
 }
 
 
@@ -224,7 +231,7 @@ body {
     }
 
     .submenubox ul li {
-        font-size: 15px;
+        /* font-size: 15px; */
     }
 
 }
@@ -239,7 +246,7 @@ body {
     }
 
     .submenubox ul li {
-        font-size: 14px;
+        /* font-size: 14px; */
     }
 
     .login,
@@ -252,7 +259,7 @@ body {
 
 
     .submenubox ul li {
-        font-size: 13px;
+        /* font-size: 13px; */
     }
 
     .world {
@@ -262,47 +269,22 @@ body {
 
 
 }
-
-@media screen and (max-width:1103px) {
-
-    .header .wrap {
-        gap: 20px;
-        flex-direction: column;
+@media screen and (max-width:1100px){
+    .sub_menu ul{
+        gap: 5px;
     }
-
-    .logo {
-        font-size: 40px;
-        padding-right: 0;
-        padding-bottom: 20px;
+    .world{
+        padding: 4px 10px;
     }
-
-    .submenubox ul li {
-        font-size: 17px;
+    .login, .Request{
+        padding: 9px 10px;
     }
-
-    .sub_menu ul li {
+    .sub_menu ul li{
         font-size: 14px;
-    }
-
-    .submenubox {
-        flex-direction: column;
-        gap: 25px;
-    }
-
-    .main_menu {
-        margin-right: 0;
-        flex-direction: column;
-    }
-
-    .submenubox ul {
-        gap: 35px;
-    }
-    .section_1{
-        padding-top: 100px;
     }
 }
 
-@media screen and (max-width:720px) {
+@media screen and (max-width:1035px) {
     .logo .hamburger {
         display: flex;
     }
@@ -501,7 +483,6 @@ body {
         padding-top: 180px;
     }
     .section_1 .wrap {
-        padding-bottom: 64px;
         gap: 24px;
         flex-direction: column;
         justify-content: center;
