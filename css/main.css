@@ -357,19 +357,21 @@ body {
     background-color: #B1D8FC;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
+    height: 100vh;
+    display: flex;
 }
 
 .section_1 .wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 664px;
 }
 
 .multiline-text {
     font-size: 56px;
     font-weight: 600;
-    padding-bottom: 40px;
+    line-height: 1.2;
+    padding-bottom: 20px;
 }
 
 .section_1 p {
@@ -391,7 +393,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
 }
 
 .section_1 .Request {
@@ -497,7 +498,7 @@ body {
 
 @media screen and (max-width:880px) {
     .section_1{
-        padding-top: 215px;
+        padding-top: 180px;
     }
     .section_1 .wrap {
         padding-bottom: 64px;
@@ -505,11 +506,6 @@ body {
         flex-direction: column;
         justify-content: center;
     }
-
-    .se1_main_img {
-        width: 450px;
-    }
-
     .bubble2 {
         top: 65px;
         height: 32px;
@@ -520,9 +516,17 @@ body {
     }
     .multiline-text{
         font-size: 40px;
+        
     }
     .section_1 p{
         font-size: 14px;
+    }
+    .section_1_imgarea{
+        display: flex;
+        justify-content: center;
+    }
+    .section_1_textarea{
+        width: 100%;
     }
 }
 
@@ -543,10 +547,6 @@ body {
     .bubble3 {
         bottom: 75px;
         height: 26px;
-    }
-
-    .se1_main_img {
-        width: 350px;
     }
 }
 
@@ -816,9 +816,6 @@ button:hover {
     font-weight: 200;
     padding-top: 20px;
 }
-.cardbox_mian{
-    width: 100%;
-}
 .card_imgbox{
     width: 100%;
 }
@@ -910,6 +907,9 @@ button:hover {
 
     .section_3_main {
         padding: 64px 0px 40px 0px;
+    }
+    .cardbox_mian{
+        width: 100%;
     }
 }
 
