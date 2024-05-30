@@ -598,17 +598,18 @@ body {
 .logos {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     gap: 40px;
     width: 100%;
+    
 }
 
 .logos img {
-    flex: 0 0 17%;
-    max-width: 17%;
-    max-height: 30px;
+    max-width: none;
     vertical-align: middle;
     opacity: 0.7;
+    width: 15%;
     transition: opacity 0.3s;
 }
 
@@ -621,13 +622,11 @@ body {
         font-size: 44px;
         margin-bottom: 60px;
     }
-
-    .logos {
-        gap: 30px;
+    .logos{
+        justify-content: center;
     }
-
     .logos img {
-        max-width: 14%;
+        width: 23%;
     }
 }
 
@@ -641,10 +640,6 @@ body {
     .trusted-by-header {
         font-size: 36px;
         margin-bottom: 50px;
-    }
-
-    .logos img {
-        max-width: 13%;
     }
 }
 
@@ -663,10 +658,6 @@ body {
 @media screen and (max-width:464px) {
     .trusted-by-header {
         margin-bottom: 30px;
-    }
-
-    .logos img {
-        max-width: 12%;
     }
 }
 
@@ -696,7 +687,7 @@ body {
 }
 
 .section_3_main {
-    padding: 120px 40px 40px 40px;
+    padding: 120px 0 40px 0;
 }
 
 .section_3_cardbox {
@@ -713,9 +704,7 @@ body {
 }
 
 .card {
-    /* padding: 20px; */
     width: 100%;
-    max-width: 588px;
     border-radius: 15px;
     transition: transform 0.3s ease;
     gap: 20px;
@@ -728,26 +717,24 @@ body {
     flex-wrap: wrap;
     align-content: center;
     align-items: flex-start;
-    padding: 70px 50px;
+    height: calc(100% - 100px);
+    padding: 50px 50px;
     gap: 20px;
 }
 
 .card1 {
     background-color: rgb(255 255 255 / 15%);
     height: 100%;
-    max-height: 704px;
 }
 
 .card2 {
     background-color: #3A5C45;
-    max-height: 296px;
-    height: 100%;
 }
 
 .card3 {
     background-color: #B1D8FC;
-    max-height: 388px;
     height: 100%;
+    align-content: center;
 }
 
 .card:hover {
@@ -791,6 +778,9 @@ button:hover {
 .card img {
     width: 100%;
     transition: transform 0.3s ease;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 .card1:hover img {
@@ -800,7 +790,6 @@ button:hover {
 .custom-line {
     height: 2px;
     background-color: rgb(255 255 255 / 15%);
-    max-width: 1196px;
     margin: 0 auto;
 }
 
@@ -809,10 +798,9 @@ button:hover {
     font-size: 80px;
     font-weight: 600;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    gap: 170px;
     padding-top: 90px;
     padding-bottom: 120px;
 }
@@ -826,17 +814,16 @@ button:hover {
 
 .card_imgbox {
     width: 100%;
+    margin-top: auto;
+    flex: 1;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 @media screen and (max-width:1295px) {
     .counter {
         font-size: 70px;
-        gap: 0;
-        justify-content: space-around;
-    }
-
-    .counter p {
-        font-size: 14px;
     }
 }
 
@@ -850,16 +837,13 @@ button:hover {
     }
 
     .card_container {
-        padding: 50px 50px;
+        padding: 50px 7%;
     }
 
     .counter {
         font-size: 60px;
     }
 
-    .counter p {
-        font-size: 13px;
-    }
 }
 
 @media screen and (max-width:1052px) {
@@ -871,12 +855,8 @@ button:hover {
         font-size: 30px;
     }
 
-    .counter {
-        font-size: 50px;
-    }
-
-    .counter p {
-        font-size: 12px;
+    .counter p{
+        font-size: 16px;
     }
 }
 
@@ -887,10 +867,6 @@ button:hover {
 
     .card h3 {
         font-size: 25px;
-    }
-
-    .card_container {
-        padding: 35px 5%;
     }
 }
 
@@ -920,6 +896,9 @@ button:hover {
 
     .counter {
         font-size: 45px;
+    }
+    .counter p{
+        font-size: 14px;
     }
 
     .section_3_main {
