@@ -22,12 +22,8 @@ body {
 
 /* header */
 .header {
-    position: fixed;
-    left: 0;
-    right: 0;
     background: white;
     padding: 20px 0;
-    z-index: 999;
 }
 
 .header .wrap {
@@ -239,11 +235,6 @@ body {
     .logo {
         font-size: 26px;
     }
-
-    .submenubox ul li {
-        /* font-size: 14px; */
-    }
-
     .login,
     .Request {
         padding: 9px 13px;
@@ -289,6 +280,11 @@ body {
 
     .header {
         padding: 0;
+        position: fixed;
+        left: 0;
+        right: 0;
+        background: white;
+        z-index: 999;
     }
 
     .main_menu {
@@ -339,6 +335,12 @@ body {
 
     .sub_menu {
         margin-top: auto;
+    }
+    .navmenu::after{
+        display: none;
+    }
+    .submenu{
+        display: none;
     }
 }
 
