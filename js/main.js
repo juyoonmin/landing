@@ -1,68 +1,56 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // bubble 애니메이션 
+function initBubbleAnimations() {
     gsap.timeline()
         .from('.bubble1', { duration: 1, opacity: 0, x: 50, y: 50 })
         .from('.bubble2', { duration: 0.7, opacity: 0, x: -50, y: 100 })
         .from('.bubble3', { duration: 0.7, opacity: 0, x: 50, y: 100 })
         .from('.bubble4', { duration: 0.7, opacity: 0, x: -50, y: 100 });
+}
 
+// 쉼표를 숫자에 추가
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
 
-
-
-    // 쉼표를 숫자에 추가
-    function numberWithCommas(x) {
-        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    }
-    const counter = { value: 1 };
+// 카운터 애니메이션을 수행하는 함수
+function initCounterAnimation() {
+    const counter = { value: 1 }; // 애니메이션 시작 값을 객체에 저장
     const trustedCounter = document.getElementById('trusted-counter');
 
     gsap.to(counter, {
         value: 25000,
         duration: 4,
-        onUpdate: () => {
+        onUpdate: () => {  // 애니메이션 업데이트 시 호출되는 함수
             trustedCounter.textContent = numberWithCommas(Math.round(counter.value)) + "+";
         },
         ease: "none"
     });
+}
 
-    gsap.registerPlugin(ScrollTrigger);
-    // 카운터 애니메이션을 수행하는 함수
-    function animateCounter(elementId, endValue, format, suffix) {
-        const target = document.getElementById(elementId); // 애니메이션 대상 요소를 ID로 가져옴
-        const obj = { val: 1 }; // 애니메이션 시작 값을 객체에 저장
+// ScrollTrigger를 사용하여 스크롤이 내려왔을때 애니메이션이 작동 
+function animateCounter(elementId, endValue, format, suffix) {
+    const target = document.getElementById(elementId);
+    const obj = { val: 1 };
 
-        // GSAP 애니메이션 정의
-        gsap.to(obj, {
-            val: endValue, // 종료 값 설정
-            ease: "none",
-            duration: 2,
-            scrollTrigger: {
-                trigger: "#" + elementId, // 애니메이션 트리거 요소 설정
-                start: "top bottom", // 트리거 조건 설정: 요소 상단이 뷰포트 하단에 닿을 때
-                toggleActions: "play none none none" // 스크롤 상호작용에 따른 애니메이션 동작 설정
-            },
-            onUpdate: function () { // 애니메이션 업데이트 시 호출되는 함수
-                target.textContent = format(obj.val) + suffix; // 텍스트 콘텐츠를 업데이트
-            }
-        });
-    }
+    gsap.to(obj, {
+        val: endValue,
+        ease: "none",
+        duration: 2,
+        scrollTrigger: {
+            trigger: "#" + elementId,
+            start: "top bottom",
+            toggleActions: "play none none none"
+        },
+        onUpdate: function () {
+            target.textContent = format(Math.round(obj.val)) + suffix;
+        }
+    });
+}
 
-    // 각 카운터에 대한 애니메이션 초기화
-    animateCounter('counter-5000', 5000, function (value) {
-        return numberWithCommas(Math.round(value));
-    }, "+");
+//section 4 animation
+function initSection4Animation() {
+    const isLargeScreen = window.innerWidth > 720;
 
-    animateCounter('counter-25000', 25000, function (value) {
-        return numberWithCommas(Math.round(value));
-    }, "+");
-
-    animateCounter('hour-counter', 48, function (value) {
-        return Math.round(value);
-    }, " hrs");
-
-
-    // section_4 애니메이션
-    gsap.timeline({
+    const timeline = gsap.timeline({
         scrollTrigger: {
             trigger: '.section_4_content',
             start: 'center center',
@@ -72,25 +60,44 @@ document.addEventListener('DOMContentLoaded', function () {
             pin: true,
             // markers: true
         }
-    })
-        .set(".section_4_content_text h3", { opacity: 0, y: 50 })
-        .set(".section_4_content_text p", { opacity: 0, y: 50 })
-        .set(".section_4_content_text button", { opacity: 0, y: 50 })
-        .set(".section_4_content .back1", { opacity: 0, y: -50, x: -50 })
-        .set(".section_4_content .img1", { opacity: 0, y: 50, x: 50 })
-        .set(".section_4_content .back2", { opacity: 0, y: -100 })
-        .set(".section_4_content .img2", { opacity: 0, y: 100 })
+    });
 
+    if (isLargeScreen) {
+        timeline
+            .set(".section_4_content_text h3", { opacity: 0, y: 50 })
+            .set(".section_4_content_text p", { opacity: 0, y: 50 })
+            .set(".section_4_content_text button", { opacity: 0, y: 50 })
+            .set(".section_4_content .back1", { opacity: 0, y: -50, x: -50 })
+            .set(".section_4_content .img1", { opacity: 0, y: 50, x: 50 })
+            .set(".section_4_content .back2", { opacity: 0, y: -100 })
+            .set(".section_4_content .img2", { opacity: 0, y: 100 })
+            .to(".section_4_content_text h3", { opacity: 1, duration: 3, y: 0 })
+            .to(".section_4_content_text p", { opacity: 1, duration: 3, y: 0 })
+            .to(".section_4_content_text button", { opacity: 1, duration: 3, y: 0 })
+            .to(".section_4_content .back1", { opacity: 1, duration: 3, y: 0, x: 0 })
+            .to(".section_4_content .img1", { opacity: 1, duration: 3, y: 0, x: 0 })
+            .to(".section_4_content .back2", { opacity: 1, duration: 3, y: 0 })
+            .to(".section_4_content .img2", { opacity: 1, duration: 3, y: 0 });
+    } else {
+        timeline
+            .set(".section_4_content .back1", { opacity: 0, y: -50, x: -50 })
+            .set(".section_4_content .img1", { opacity: 0, y: 50, x: 50 })
+            .set(".section_4_content .back2", { opacity: 0, y: -100 })
+            .set(".section_4_content .img2", { opacity: 0, y: 100 })
+            .set(".section_4_content_text h3", { opacity: 0, y: 50 })
+            .set(".section_4_content_text p", { opacity: 0, y: 50 })
+            .set(".section_4_content_text button", { opacity: 0, y: 50 })
+            .to(".section_4_content .back1", { opacity: 1, duration: 3, y: 0, x: 0 })
+            .to(".section_4_content .img1", { opacity: 1, duration: 3, y: 0, x: 0 })
+            .to(".section_4_content .back2", { opacity: 1, duration: 3, y: 0 })
+            .to(".section_4_content .img2", { opacity: 1, duration: 3, y: 0 })
+            .to(".section_4_content_text h3", { opacity: 1, duration: 3, y: 0 })
+            .to(".section_4_content_text p", { opacity: 1, duration: 3, y: 0 })
+            .to(".section_4_content_text button", { opacity: 1, duration: 3, y: 0 });
+    }
+}
 
-        .to(".section_4_content_text h3", { opacity: 1, duration: 3, y: 0 })
-        .to(".section_4_content_text p", { opacity: 1, duration: 3, y: 0 })
-        .to(".section_4_content_text button", { opacity: 1, duration: 3, y: 0 })
-        .to(".section_4_content .back1", { opacity: 1, duration: 3, y: 0, x: 0 })
-        .to(".section_4_content .img1", { opacity: 1, duration: 3, y: 0, x: 0 })
-        .to(".section_4_content .back2", { opacity: 1, duration: 3, y: 0 })
-        .to(".section_4_content .img2", { opacity: 1, duration: 3, y: 0 });
-
-
+function initSection4Content2Animation() {
     gsap.timeline({
         scrollTrigger: {
             trigger: '.section_4_content2',
@@ -108,43 +115,42 @@ document.addEventListener('DOMContentLoaded', function () {
         .set(".section_4_content2 .section_4_content_text h3", { opacity: 0, y: 50 })
         .set(".section_4_content2 .section_4_content_text p", { opacity: 0, y: 50 })
         .set(".section_4_content2 .section_4_content_text button", { opacity: 0, y: 50 })
-
-
         .to(".section_4_content2 .section_4_content_img", { opacity: 1, duration: 2, y: 0 })
         .to(".section_4_content2 .img3", { opacity: 1, duration: 2, y: 0 })
         .to(".section_4_content2 .section_4_content_text", { opacity: 1, duration: 0.1, y: 0 })
         .to(".section_4_content2 .section_4_content_text h3", { opacity: 1, duration: 2, y: 0 })
         .to(".section_4_content2 .section_4_content_text p", { opacity: 1, duration: 2, y: 0 })
         .to(".section_4_content2 .section_4_content_text button", { opacity: 1, duration: 2, y: 0 });
+}
 
-
-
-    // swiper
-
+// swiper animation 첫화면
+function initSwiperAnimation() {
     gsap.timeline({
         scrollTrigger: {
             trigger: '.section_5_text',
             start: 'top center',
         }
     })
-        .set(".swiper-slide:nth-child(1) .section_4_content_text", { opacity: 0, })
-        .set(".swiper-slide:nth-child(1) .section_4_content_text h3", { opacity: 0, x: -50, })
-        .set(".swiper-slide:nth-child(1) .section_4_content_text p", { opacity: 0, x: -50, })
-        .set(".swiper-slide:nth-child(1) .section_4_content_text button", { opacity: 0, x: -50, })
-        .set(".swiper-slide:nth-child(1) .swiper_imgback", { opacity: 0, scale: 0.8 })
+        .set(".swiper-slide:nth-child(1) .section_4_content_text", { opacity: 0 })
+        .set(".swiper-slide:nth-child(1) .section_4_content_text h3", { opacity: 0, x: -50 })
+        .set(".swiper-slide:nth-child(1) .section_4_content_text p", { opacity: 0, x: -50 })
+        .set(".swiper-slide:nth-child(1) .section_4_content_text button", { opacity: 0, x: -50 })
+        .set(".swiper-slide:nth-child(1) .swiper_imgback", { opacity: 0, rotation: 0, scale: 0.8 })
         .set(".swiper-slide:nth-child(1) .swiper_imgback img", { opacity: 0, rotation: 0, scale: 0.8 })
-
         .to(".swiper-slide:nth-child(1) .section_4_content_text", { opacity: 1, duration: 0.5 })
         .addLabel('PStart')
         .to(".swiper-slide:nth-child(1) .section_4_content_text h3", { opacity: 1, duration: 0.7, x: 0 }, 'PStart')
         .to(".swiper-slide:nth-child(1) .swiper_imgback", { opacity: 1, duration: 0.7, y: 0, x: 0, scale: 1 }, 'PStart')
         .to(".swiper-slide:nth-child(1) .swiper_imgback img", { opacity: 1, duration: 0.7, y: 0, x: 0, scale: 1 }, 'PStart')
         .addLabel('PEnd')
-        .to(".swiper-slide:nth-child(1) .swiper_imgback img", { rotation: 10, duration: 0.5 }, 'PEnd')
+        .to(".swiper-slide:nth-child(1) .swiper_imgback", { rotation: 10, duration: 0.5 }, 'PEnd')
+        .to(".swiper-slide:nth-child(1) .swiper_imgback img", { rotation: -10, duration: 0.5 }, 'PEnd')
         .to(".swiper-slide:nth-child(1) .section_4_content_text p", { opacity: 1, duration: 0.5, x: 0 }, 'PEnd')
         .to(".swiper-slide:nth-child(1) .section_4_content_text button", { opacity: 1, duration: 0.5, x: 0 });
+}
 
-
+// swiper animation
+function initSwiper() {
     const swiper = new Swiper('.swiper', {
         keyboard: true,
         spaceBetween: 30,
@@ -168,27 +174,26 @@ document.addEventListener('DOMContentLoaded', function () {
                         .set(activeSlide.querySelector('.section_4_content_text h3'), { opacity: 0, x: -50 })
                         .set(activeSlide.querySelector('.section_4_content_text p'), { opacity: 0, x: -50 })
                         .set(activeSlide.querySelector('.section_4_content_text button'), { opacity: 0, x: -50 })
-                        .set(activeSlide.querySelector('.swiper_imgback'), { opacity: 0, scale: 0.8 })
-                        .set(activeSlide.querySelector('.swiper_imgback img'), { opacity: 0, rotation: 0, scale: 0.8 });
-
-                    tl.to(activeSlide.querySelector('.section_4_content_text'), { opacity: 1, duration: 0.5 })
+                        .set(activeSlide.querySelector('.swiper_imgback'), { opacity: 0, rotation: 0, scale: 0.8 })
+                        .set(activeSlide.querySelector('.swiper_imgback img'), { opacity: 0, rotation: 0, scale: 0.8 })
+                        .to(activeSlide.querySelector('.section_4_content_text'), { opacity: 1, duration: 0.5 })
                         .addLabel('PStart')
                         .to(activeSlide.querySelector('.section_4_content_text h3'), { opacity: 1, duration: 0.7, x: 0 }, 'PStart')
                         .to(activeSlide.querySelector('.swiper_imgback'), { opacity: 1, duration: 0.7, y: 0, x: 0, scale: 1 }, 'PStart')
                         .to(activeSlide.querySelector('.swiper_imgback img'), { opacity: 1, duration: 0.7, y: 0, x: 0, scale: 1 }, 'PStart')
                         .addLabel('PEnd')
-                        .to(activeSlide.querySelector('.swiper_imgback img'), { rotation: 10, duration: 0.5 }, 'PEnd')
+                        .to(activeSlide.querySelector('.swiper_imgback'), { rotation: 10, duration: 0.5 }, 'PEnd')
+                        .to(activeSlide.querySelector('.swiper_imgback img'), { rotation: -10, duration: 0.5 }, 'PEnd')
                         .to(activeSlide.querySelector('.section_4_content_text p'), { opacity: 1, duration: 0.5, x: 0 }, 'PEnd')
                         .to(activeSlide.querySelector('.section_4_content_text button'), { opacity: 1, duration: 0.5, x: 0 });
-
                 }
             },
         },
     });
+}
 
-
-    // section_6
-
+// section 6 animation
+function initSection6Animation() {
     if (window.innerWidth >= 880) {
         gsap.timeline({
             scrollTrigger: {
@@ -208,24 +213,44 @@ document.addEventListener('DOMContentLoaded', function () {
             .set(".step1", { opacity: 0, y: -50 })
             .set(".step2", { opacity: 0, y: -50 })
             .set(".step3", { opacity: 0, y: -50 })
-        
             .to(".section_6_img", { opacity: 1, duration: 2, y: 0, scale: 1 })
             .to(".se6_img", { opacity: 1, duration: 2, y: 0, scale: 1 }, "<")
-        
             .to(".step1", { opacity: 1, duration: 1.3, y: 0 }, "<")
-        
             .to(".step2", { opacity: 1, duration: 1.3, y: 0 }, ">")
             .to(".se6_bubble1", { opacity: 1, duration: 0.7, y: 0 }, "<")
             .to(".se6_bubble2", { opacity: 1, duration: 0.7, y: 0 }, "<0.7")
-        
             .to(".step3", { opacity: 1, duration: 1.3, y: 0 }, "<0.7");
     }
+}
 
-
+// 햄버거 메뉴
+function initHamburgerMenu() {
     document.getElementById('hamburger').addEventListener('click', function () {
         this.classList.toggle('menu_active');
         document.getElementById('submenubox').classList.toggle('menu_active');
     });
+}
 
+// 크기 조정 시 애니메이션을 다시 초기화하는 함수
+function reinitializeAnimations() {
+    ScrollTrigger.getAll().forEach(trigger => trigger.kill()); // 모든 ScrollTrigger 죽이기
+    initSection4Animation(); //section 4 animation 다시 초기화
+    initSection4Content2Animation(); // section 4 content 2 animation 다시 설정
+}
+
+// 창 크기 조절 시 애니메이션을 다시 초기화
+window.addEventListener('resize', reinitializeAnimations);
+
+document.addEventListener('DOMContentLoaded', function () {
+    initBubbleAnimations();
+    initCounterAnimation();
+    animateCounter('counter-5000', 5000, numberWithCommas, "+");
+    animateCounter('counter-25000', 25000, numberWithCommas, "+");
+    animateCounter('hour-counter', 48, Math.round, " hrs");
+    initSection4Animation();
+    initSection4Content2Animation();
+    initSwiperAnimation();
+    initSwiper();
+    initSection6Animation();
+    initHamburgerMenu();
 });
-
