@@ -1640,6 +1640,10 @@ button:hover {
         height: auto;
         bottom: 205px;
     }
+    .section_6_img, .se6_img, .se6_bubble1, .se6_bubble2, .step {
+        opacity: 1 !important;
+        transform: none !important;
+    }
 }
 
 @media screen and (max-width: 850px) {

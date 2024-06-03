@@ -31,14 +31,17 @@ function animateCounter(elementId, endValue, format, suffix) {
     const target = document.getElementById(elementId);
     const obj = { val: 1 };
 
-    gsap.to(obj, {
+   gsap.to(obj, {
         val: endValue,
         ease: "none",
         duration: 2,
         scrollTrigger: {
             trigger: "#" + elementId,
-            start: "top bottom",
-            toggleActions: "play none none none"
+            start: "top bottom", 
+            toggleActions: "play none none none",
+            onEnter: () => {
+                target.textContent = format(Math.round(obj.val)) + suffix;
+            }
         },
         onUpdate: function () {
             target.textContent = format(Math.round(obj.val)) + suffix;
@@ -193,9 +196,15 @@ function initSwiper() {
 }
 
 // section 6 animation
+let section6Trigger;
+
 function initSection6Animation() {
+    if (section6Trigger) {
+        section6Trigger.kill(); 
+    }
+
     if (window.innerWidth >= 880) {
-        gsap.timeline({
+        section6Trigger = gsap.timeline({
             scrollTrigger: {
                 trigger: '.section_6_content',
                 start: 'center center',
@@ -206,20 +215,20 @@ function initSection6Animation() {
                 // markers: true,
             }
         })
-            .set(".section_6_img", { opacity: 0, y: 50, scale: 0.8 })
-            .set(".se6_img", { opacity: 0, y: 50, scale: 0.8 })
-            .set(".se6_bubble1", { opacity: 0, y: 50 })
-            .set(".se6_bubble2", { opacity: 0, y: 50 })
-            .set(".step1", { opacity: 0, y: -50 })
-            .set(".step2", { opacity: 0, y: -50 })
-            .set(".step3", { opacity: 0, y: -50 })
-            .to(".section_6_img", { opacity: 1, duration: 2, y: 0, scale: 1 })
-            .to(".se6_img", { opacity: 1, duration: 2, y: 0, scale: 1 }, "<")
-            .to(".step1", { opacity: 1, duration: 1.3, y: 0 }, "<")
-            .to(".step2", { opacity: 1, duration: 1.3, y: 0 }, ">")
-            .to(".se6_bubble1", { opacity: 1, duration: 0.7, y: 0 }, "<")
-            .to(".se6_bubble2", { opacity: 1, duration: 0.7, y: 0 }, "<0.7")
-            .to(".step3", { opacity: 1, duration: 1.3, y: 0 }, "<0.7");
+        .set(".section_6_img", { opacity: 0, y: 50, scale: 0.8 })
+        .set(".se6_img", { opacity: 0, y: 50, scale: 0.8 })
+        .set(".se6_bubble1", { opacity: 0, y: 50 })
+        .set(".se6_bubble2", { opacity: 0, y: 50 })
+        .set(".step1", { opacity: 0, y: -50 })
+        .set(".step2", { opacity: 0, y: -50 })
+        .set(".step3", { opacity: 0, y: -50 })
+        .to(".section_6_img", { opacity: 1, duration: 2, y: 0, scale: 1 })
+        .to(".se6_img", { opacity: 1, duration: 2, y: 0, scale: 1 }, "<")
+        .to(".step1", { opacity: 1, duration: 1.3, y: 0 }, "<")
+        .to(".step2", { opacity: 1, duration: 1.3, y: 0 }, ">")
+        .to(".se6_bubble1", { opacity: 1, duration: 0.7, y: 0 }, "<")
+        .to(".se6_bubble2", { opacity: 1, duration: 0.7, y: 0 }, "<0.7")
+        .to(".step3", { opacity: 1, duration: 1.3, y: 0 }, "<0.7");
     }
 }
 
@@ -233,9 +242,16 @@ function initHamburgerMenu() {
 
 // 크기 조정 시 애니메이션을 다시 초기화하는 함수
 function reinitializeAnimations() {
-    ScrollTrigger.getAll().forEach(trigger => trigger.kill()); // 모든 ScrollTrigger 죽이기
-    initSection4Animation(); //section 4 animation 다시 초기화
-    initSection4Content2Animation(); // section 4 content 2 animation 다시 설정
+    ScrollTrigger.getAll().forEach(trigger => trigger.kill()); // 모든 ScrollTrigger 제거
+    initSection4Animation(); // section 4 애니메이션 다시 초기화
+    initSection4Content2Animation(); // section 4 content 2 애니메이션 다시 설정
+    animateCounter('counter-5000', 5000, numberWithCommas, "+");
+    animateCounter('counter-25000', 25000, numberWithCommas, "+");
+    animateCounter('hour-counter', 48, Math.round, " hrs");
+    initSwiperAnimation();
+    initSwiper();
+    initSection6Animation(); // section 6 애니메이션 다시 설정
+    ScrollTrigger.refresh(); // ScrollTrigger 새로고침
 }
 
 // 창 크기 조절 시 애니메이션을 다시 초기화
@@ -253,4 +269,5 @@ document.addEventListener('DOMContentLoaded', function () {
     initSwiper();
     initSection6Animation();
     initHamburgerMenu();
+    ScrollTrigger.refresh();
 });
